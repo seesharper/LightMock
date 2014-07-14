@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LightMock.Tests
 {
+    using System.Linq;
+
     using LightMock;
 
     [TestClass]
@@ -114,7 +116,7 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
-        public void Arrange_ReturnValue_ReturnsValue()
+        public void Execute_ArrengedReturnValue_ReturnsValue()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -124,6 +126,30 @@ namespace LightMock.Tests
 
             Assert.AreEqual("SomeValue", result);
         }
+
+        [TestMethod]
+        public void Execute_NoArrangement_ReturnsDefaultValue()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);            
+
+            string result = fooMock.Execute();
+
+            Assert.AreEqual(default(string), result);
+        }
+
+
+        [TestMethod]
+        public void Execute_MethodCallInInvocation_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            string[] strings = new[] { "SomeValue", "AnotherValue" };
+
+            fooMock.Execute(strings.First(s => s.StartsWith("Some")));
+        }
+
 
     }
 }

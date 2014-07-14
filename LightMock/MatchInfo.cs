@@ -3,10 +3,9 @@
     using System.Linq;
     using System.Linq.Expressions;
     using System.Reflection;
-
     using ExpressionReflect;
 
-    public class MatchInfo
+    internal class MatchInfo
     {
         public MatchInfo(MethodInfo method, LambdaExpression[] matchExpressions)
         {

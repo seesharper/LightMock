@@ -46,7 +46,7 @@
                 expression = (LambdaExpression)expression.Replace<MemberExpression>(m => m == memberExpression, me => methodCallExpression);
             }
             
-            var invocationVisitor = new PredicateBuilder();
+            var invocationVisitor = new MatchInfoBuilder();
             return invocationVisitor.Build((LambdaExpression)expression.Simplify());
         }
        

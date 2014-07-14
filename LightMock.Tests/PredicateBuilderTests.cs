@@ -15,7 +15,7 @@
         [TestMethod]
         public void Build_Constant_ReturnsTrueOnMatchingValue()
         {
-            var predicateBuilder = new PredicateBuilder();
+            var predicateBuilder = new MatchInfoBuilder();
             Expression<Action<IFoo>> expression = (f) => f.Execute("SomeString");
             
             var matchInfo = predicateBuilder.Build(expression);
@@ -26,7 +26,7 @@
         [TestMethod]
         public void Build_Constant_ReturnsFalseOnNonMatchingValue()
         {
-            var predicateBuilder = new PredicateBuilder();
+            var predicateBuilder = new MatchInfoBuilder();
             Expression<Action<IFoo>> expression = (f) => f.Execute("SomeString");
 
             var matchInfo = predicateBuilder.Build(expression);

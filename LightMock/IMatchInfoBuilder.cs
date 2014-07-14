@@ -6,7 +6,7 @@
     /// Represents a class that is capable of building 
     /// a set of lambda expressions used to match argument values.
     /// </summary>
-    public interface IPredicateBuilder
+    internal interface IMatchInfoBuilder
     {
         /// <summary>
         /// Builds a <see cref="LambdaExpression"/> for each 

@@ -2,12 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics;
     using System.Linq;
     using System.Linq.Expressions;
-    using System.Reflection;
-
-    using ExpressionReflect;
 
     /// <summary>
     /// A class that represents the mock context for a given <typeparamref name="TMock"/> type.
@@ -15,9 +11,8 @@
     /// <typeparam name="TMock">The target mock type.</typeparam>
     public class MockContext<TMock> : IMockContext<TMock>, IInvocationContext<TMock>
     {
-        private readonly List<InvocationInfo> invocations = new List<InvocationInfo>();
-        
-        private List<ArrangementBase> arrangements = new List<ArrangementBase>(); 
+        private readonly List<InvocationInfo> invocations = new List<InvocationInfo>();        
+        private readonly List<ArrangementBase> arrangements = new List<ArrangementBase>(); 
 
         /// <summary>
         /// Verifies that the method represented by the <paramref name="matchExpression"/> has 
@@ -49,7 +44,6 @@
             }
         }
 
-
         /// <summary>
         /// Tracks that the method represented by the <paramref name="expression"/>
         /// has been invoked.
@@ -60,16 +54,12 @@
         {
             var invocationInfo = expression.ToInvocationInfo();
             invocations.Add(invocationInfo);
-
-            //Find first mathcing arrangement
-
+           
             var arrangement = arrangements.FirstOrDefault(a => a.Matches(invocationInfo));
             if (arrangement != null)
             {
                 arrangement.Execute(invocationInfo.Arguments);
-            }
-
-            
+            }            
         }
 
         /// <summary>
@@ -91,6 +81,7 @@
             {
                 return (TResult)arrangement.Execute(invocationInfo.Arguments);
             }
+
             return default(TResult);
         }
 
@@ -106,9 +97,7 @@
             var arrangement = new Arrangement<TResult>(expression);
             arrangements.Add(arrangement);
             return arrangement;
-        }
-
-        
+        }        
     }
 
 
