@@ -1,4 +1,30 @@
-﻿namespace LightMock
+﻿/*****************************************************************************   
+    The MIT License (MIT)
+
+    Copyright (c) 2014 bernhard.richter@gmail.com
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+******************************************************************************    
+    https://github.com/seesharper/LightMock
+    http://twitter.com/bernhardrichter
+******************************************************************************/
+namespace LightMock
 {
     using System;
     using System.Collections.Generic;
@@ -12,7 +38,34 @@
     public class MockContext<TMock> : IMockContext<TMock>, IInvocationContext<TMock>
     {
         private readonly List<InvocationInfo> invocations = new List<InvocationInfo>();        
-        private readonly List<ArrangementBase> arrangements = new List<ArrangementBase>(); 
+        private readonly List<ArrangementBase> arrangements = new List<ArrangementBase>();
+
+        /// <summary>
+        /// Arranges a mocked method. 
+        /// </summary>
+        /// <param name="matchExpression">The match expression that describes where 
+        /// this <see cref="Arrangement"/> will be applied.</param>
+        /// <returns>A new <see cref="Arrangement"/> used to apply method behavior.</returns>
+        public Arrangement Arrange(Expression<Action<TMock>> matchExpression)
+        {
+            var arrangement = new Arrangement(matchExpression);
+            arrangements.Add(arrangement);
+            return arrangement;
+        }
+
+        /// <summary>
+        /// Arranges a mocked method. 
+        /// </summary>
+        /// <typeparam name="TResult">The type of value returned from the mocked method.</typeparam>
+        /// <param name="matchExpression">The match expression that describes where 
+        /// this <see cref="Arrangement{TResult}"/> will be applied.</param>
+        /// <returns>A new <see cref="Arrangement{TResult}"/> used to apply method behavior.</returns>
+        public Arrangement<TResult> Arrange<TResult>(Expression<Func<TMock, TResult>> matchExpression)
+        {
+            var arrangement = new Arrangement<TResult>(matchExpression);
+            arrangements.Add(arrangement);
+            return arrangement;
+        }
 
         /// <summary>
         /// Verifies that the method represented by the <paramref name="matchExpression"/> has 
@@ -35,7 +88,6 @@
         public void Assert(Expression<Action<TMock>> matchExpression, Invoked invoked)
         {
             var matchInfo = matchExpression.ToMatchInfo();
-
             var callCount = invocations.Count(matchInfo.Matches);
                         
             if (!invoked.Verify(callCount))
@@ -83,100 +135,6 @@
             }
 
             return default(TResult);
-        }
-
-        public Arrangement Arrange(Expression<Action<TMock>> expression)
-        {
-            var arrangement = new Arrangement(expression);
-            arrangements.Add(arrangement);
-            return arrangement;
-        }
-
-        public Arrangement<TResult> Arrange<TResult>(Expression<Func<TMock, TResult>> expression)
-        {
-            var arrangement = new Arrangement<TResult>(expression);
-            arrangements.Add(arrangement);
-            return arrangement;
-        }        
+        }                
     }
-
-
-
-   
-
-
-    public abstract class ArrangementBase
-    {
-        public LambdaExpression Expression { get; private set; }
-
-        protected List<Action<object[]>> actions = new List<Action<object[]>>();
-
-        public ArrangementBase(LambdaExpression expression)
-        {
-            Expression = expression;
-        }
-
-        public void Throws<TException>() where TException : Exception, new()
-        {
-            actions.Add((args) => { throw new TException(); });
-        }
-
-        public virtual object Execute(object[] arguments)
-        {
-            foreach (var action in actions)
-            {
-                action(arguments);
-            }
-            return null;
-        }
-        
-
-        internal bool Matches(InvocationInfo invocationInfo)
-        {
-            return Expression.ToMatchInfo().Matches(invocationInfo);
-        }
-    }
-
-
-    public class Arrangement : ArrangementBase
-    {
-        public Arrangement(LambdaExpression expression)
-            : base(expression)
-        {
-        }
-
-        public void Callback<T>(Action<T> callBack)
-        {
-            actions.Add(args => callBack.DynamicInvoke(args));
-        }       
-    }
-    
-    public class Arrangement<TResult> : ArrangementBase
-    {
-        private TResult result;
-        
-        public Arrangement(LambdaExpression expression)
-            : base(expression)
-        {
-        }
-
-        public Arrangement<TResult> Returns(TResult value)
-        {
-            result = value;
-            return this;
-        }
-
-        public override object Execute(object[] arguments)
-        {
-            base.Execute(arguments);
-            
-            if (result.Equals(default(TResult)))
-            {
-                return default(TResult);
-            }
-            return result;
-        }
-    }
-
-
 }

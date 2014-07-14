@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Arrangement.cs" />
+    <Compile Include="ArrangementBase.cs" />
     <Compile Include="ExpressionExtensions.cs" />
     <Compile Include="IInvocationContext.cs" />
     <Compile Include="IInvocationInfoBuilder.cs" />
