@@ -25,8 +25,8 @@
 
         public static InvocationInfo ToInvocationInfo(this LambdaExpression expression)
         {
-            var invocationVisitor = new InvocationVisitor();
-            return invocationVisitor.GetInvocationInfo(expression.Simplify());
+            var invocationVisitor = new InvocationInfoBuilder();
+            return invocationVisitor.GetInvocationInfo((LambdaExpression)expression.Simplify());
         }
 
         public static MatchInfo ToMatchInfo(this LambdaExpression expression)

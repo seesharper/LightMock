@@ -59,6 +59,7 @@
     <Compile Include="MoqContextTests.cs" />
     <Compile Include="PredicateBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LightMock\LightMock.csproj">

@@ -35,9 +35,10 @@
   <ItemGroup>
     <Compile Include="ExpressionExtensions.cs" />
     <Compile Include="IInvocationContext.cs" />
+    <Compile Include="IInvocationInfoBuilder.cs" />
     <Compile Include="IMockContext.cs" />
     <Compile Include="InvocationInfo.cs" />
-    <Compile Include="InvocationVisitor.cs" />
+    <Compile Include="InvocationInfoBuilder.cs" />
     <Compile Include="IMatchInfoBuilder.cs" />
     <Compile Include="MatchInfo.cs" />
     <Compile Include="MockContext.cs" />

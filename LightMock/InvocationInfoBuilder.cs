@@ -4,15 +4,15 @@
     using System.Linq;
     using System.Linq.Expressions;
     using System.Reflection;
-    
+
     /// <summary>
     /// An <see cref="ExpressionVisitor"/> that extracts 
     /// the target <see cref="MethodInfo"/> along with the 
     /// arguments used to invoke the method.
     /// </summary>
-    internal class InvocationVisitor : ExpressionVisitor
+    internal class InvocationInfoBuilder : ExpressionVisitor, IInvocationInfoBuilder
     {
-        private MethodInfo method;
+        private MethodInfo targetMethod;
 
         private Collection<object> arguments; 
 
@@ -23,13 +23,13 @@
         /// <param name="expression">The <see cref="Expression"/> from 
         /// which to extract the method and its arguments.</param>
         /// <returns></returns>
-        public InvocationInfo GetInvocationInfo(Expression expression)
+        public InvocationInfo GetInvocationInfo(LambdaExpression expression)
         {
-            arguments = new Collection<object>();
-            method = null;
+            targetMethod = ((MethodCallExpression)expression.Body).Method;
+            arguments = new Collection<object>();            
             Visit(expression);            
             
-            return new InvocationInfo(method, arguments.ToArray());
+            return new InvocationInfo(targetMethod, arguments.ToArray());
         }
 
         /// <summary>
@@ -46,8 +46,8 @@
                 {
                     arguments.Add(((ConstantExpression)argument).Value);
                 }               
-            }                                                            
-            method = node.Method;            
+            }   
+                                                                     
             return base.VisitMethodCall(node);
         }  
     }
