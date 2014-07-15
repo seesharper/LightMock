@@ -53,6 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ArrangementTests.cs" />
     <Compile Include="BarMock.cs" />
     <Compile Include="ExpressionExtensions.cs" />
     <Compile Include="FooMock.cs" />

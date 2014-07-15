@@ -38,7 +38,7 @@ namespace LightMock
     public class MockContext<TMock> : IMockContext<TMock>, IInvocationContext<TMock>
     {
         private readonly List<InvocationInfo> invocations = new List<InvocationInfo>();        
-        private readonly List<ArrangementBase> arrangements = new List<ArrangementBase>();
+        private readonly List<Arrangement> arrangements = new List<Arrangement>();
 
         /// <summary>
         /// Arranges a mocked method. 

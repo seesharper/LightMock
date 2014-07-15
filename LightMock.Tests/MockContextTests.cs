@@ -103,16 +103,7 @@ namespace LightMock.Tests
             fooMock.Execute("SomeValue");
         }
 
-        [TestMethod]
-        public void Arrange_CallBack_InvokesCallback()
-        {
-            var mockContext = new MockContext<IFoo>();
-            var fooMock = new FooMock(mockContext);
-            string callBackResult = null;
-            mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Callback<string>(s => callBackResult = s);
-            fooMock.Execute("SomeValue");
-            Assert.AreEqual("SomeValue", callBackResult);
-        }
+       
 
         [TestMethod]
         public void Execute_ArrengedReturnValue_ReturnsValue()
