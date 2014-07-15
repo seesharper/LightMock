@@ -8,20 +8,19 @@ namespace LightMock.Tests
     using LightMock;
 
     [TestClass]
-    public class MoqContextTests
+    public class MockContextTests
     {
         [TestMethod]
-        public void Verify_Once_IsVerified()
+        public void Assert_Once_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);            
             fooMock.Execute("SomeValue");            
-            mockContext.Assert(f => f.Execute("SomeValue"));
-            Assert.IsTrue(true);
+            mockContext.Assert(f => f.Execute("SomeValue"));            
         }
 
         [TestMethod]
-        public void Verify_Twice_IsVerified()
+        public void Assert_Twice_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -32,7 +31,7 @@ namespace LightMock.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Execute_ZeroTimes_ThrowsException()
+        public void Assert_WithoutInvocation_ThrowsException()
         {
             var mockContext = new MockContext<IFoo>();            
             mockContext.Assert(f => f.Execute("SomeValue"));
@@ -40,14 +39,14 @@ namespace LightMock.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Execute_ZeroTimesWithExpectedOnce_ThrowsException()
+        public void Assert_ExpectedOnceWithoutInvocation_ThrowsException()
         {
             var mockContext = new MockContext<IFoo>();
             mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Once);
         }
 
         [TestMethod]
-        public void Execute_OneTimesWithExpectedOnce_IsVerified()
+        public void Assert_InvokedOnceExpectedOnce_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -57,7 +56,7 @@ namespace LightMock.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Execute_TwiceWithExpectedOnce_ThrowsException()
+        public void Assert_InvokedTwiceWithExpectedOnce_ThrowsException()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -67,7 +66,7 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
-        public void Execute_WithValidMatchPredicate_IsVerified()
+        public void Assert_WithValidMatchPredicate_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -77,7 +76,7 @@ namespace LightMock.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Execute_WithInvalidMatchPredicate_ThrowsException()
+        public void Assert_WithInvalidMatchPredicate_ThrowsException()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -86,7 +85,7 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
-        public void Execute_IsAnyValue_IsVerified()
+        public void Assert_IsAnyValue_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -138,18 +137,15 @@ namespace LightMock.Tests
             Assert.AreEqual(default(string), result);
         }
 
-
         [TestMethod]
         public void Execute_MethodCallInInvocation_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
 
-            string[] strings = new[] { "SomeValue", "AnotherValue" };
+            string[] strings = { "SomeValue", "AnotherValue" };
 
             fooMock.Execute(strings.First(s => s.StartsWith("Some")));
         }
-
-
     }
 }
