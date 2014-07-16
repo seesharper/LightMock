@@ -11,6 +11,23 @@ namespace LightMock.Tests
     public class MockContextTests
     {
         [TestMethod]
+        public void Assert_Never_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();            
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_NeverWhenInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");            
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
+        }
+
+        [TestMethod]
         public void Assert_Once_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();

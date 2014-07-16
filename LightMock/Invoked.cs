@@ -58,6 +58,17 @@ namespace LightMock
         }
 
         /// <summary>
+        /// Gets a new <see cref="Invoked"/> specifying that method should never have been invoked.
+        /// </summary>
+        public static Invoked Never
+        {
+            get
+            {
+                return new Invoked(i => i == 0);
+            }
+        }
+
+        /// <summary>
         /// Specifies that the mocked method should be invoked at least a given number of times.
         /// </summary>
         /// <param name="callCount">The expected number of times for the mocked method to be invoked.</param>
