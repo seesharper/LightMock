@@ -113,7 +113,8 @@ Execute a callback
 	var mockContext = new MockContext<IFoo>();
 	var fooMock = new FooMock(mockContext);
 	string callBackResult = null;
-	mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Callback<string>(s => callBackResult = s);
+	mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue))
+		.Callback<string>(s => callBackResult = s);
 
 	fooMock.Execute("SomeValue");
 
