@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LightMock.Tests
 {
+    using System.Collections.Specialized;
     using System.Linq;
 
     using LightMock;
@@ -154,6 +155,28 @@ namespace LightMock.Tests
             string[] strings = { "SomeValue", "AnotherValue" };
 
             fooMock.Execute(strings.First(s => s.StartsWith("Some")));
+        }
+
+        [TestMethod]
+        public void Assert_Null_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            fooMock.Execute(null);
+
+            mockContext.Assert(f => f.Execute(null));
+        }
+
+        [TestMethod]
+        public void Assert_StringEmpty_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            fooMock.Execute(string.Empty);
+
+            mockContext.Assert(f => f.Execute(string.Empty));
         }
     }
 }

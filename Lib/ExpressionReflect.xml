@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExpressionReflect</name>
+    </assembly>
+    <members>
+        <member name="T:ExpressionReflect.Fluxera.Storage.Evaluator">
+            <summary>
+            Enables the partial evaluation of queries.
+            </summary>
+            <remarks>
+            From http://msdn.microsoft.com/en-us/library/bb546158.aspx
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ExpressionReflect.Fluxera.Storage.Evaluator.PartialEval(System.Linq.Expressions.Expression)" -->
+        <!-- Badly formed XML comment ignored for member "M:ExpressionReflect.Fluxera.Storage.Evaluator.PartialEval(System.Linq.Expressions.Expression,System.Func{System.Linq.Expressions.Expression,System.Boolean})" -->
+        <!-- Badly formed XML comment ignored for member "T:ExpressionReflect.Fluxera.Storage.Evaluator.SubtreeEvaluator" -->
+        <member name="T:ExpressionReflect.Fluxera.Storage.Evaluator.Nominator">
+            <summary>
+            Performs bottom-up analysis to determine which nodes can possibly
+            be part of an evaluated sub-tree.
+            </summary>
+        </member>
+        <member name="T:ExpressionReflect.ExpressionReflectionExecutor">
+            <summary>
+            An expression visitor that translates the expression tree to reflection calls.
+            </summary>
+        </member>
+        <member name="M:ExpressionReflect.ExpressionReflectionExecutor.Execute(System.Boolean)">
+            <summary>
+            The entry point for the evaluation.
+            </summary>
+            <param name="returnsValue">Flag, indicating if the expression returns a value. The default is <c>true</c>.</param>
+            <returns>The result of the expression.</returns>
+        </member>
+        <member name="M:ExpressionReflect.ExpressionReflectionExecutor.GetValueFromStack">
+            <summary>
+            Gets a single value from the stack.
+            </summary>
+            <returns>The element.</returns>
+        </member>
+    </members>
+</doc>

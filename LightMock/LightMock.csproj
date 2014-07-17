@@ -53,13 +53,12 @@
     <Compile Include="Invoked.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ExpressionReflect">
-      <HintPath>..\packages\ExpressionReflect.1.0.0\lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\ExpressionReflect.dll</HintPath>
-    </Reference>
+    <None Include="LightMock.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LightMock.nuspec" />
-    <None Include="packages.config" />
+    <Reference Include="ExpressionReflect">
+      <HintPath>..\Lib\ExpressionReflect.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
