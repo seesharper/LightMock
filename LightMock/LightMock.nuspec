@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>LightMock</id>
-        <version>1.0.0.2</version>
+        <version>1.0.0.3</version>
         <authors>Bernhard Richter</authors>
         <owners>Bernhard Richter</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
@@ -10,9 +10,6 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>LightMock is a simple mocking library that can be used on platforms that does not allow dynamic code generation.</description>        
         <copyright>Bernhard Richter</copyright>
-        <tags>Mocking Mock Xamarin iOS Android</tags>
-        <dependencies>
-            <dependency id="ExpressionReflect" version="1.0.0.0" />
-        </dependencies>
+        <tags>Mocking Mock Xamarin iOS Android</tags>        
     </metadata>   
 </package>
