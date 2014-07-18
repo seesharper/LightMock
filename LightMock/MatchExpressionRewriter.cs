@@ -58,13 +58,13 @@
         private static MethodInfo GetIsMethod(MemberInfo member)
         {
             // ReSharper disable once PossibleNullReferenceException
-            return member.DeclaringType.GetTypeInfo().GetDeclaredMethod("Is");            
+	        return member.DeclaringType.GetMethod("Is");
         }
 
         private static Type GetParameterType(MemberInfo member)
         {
             // ReSharper disable once PossibleNullReferenceException
-            return member.DeclaringType.GenericTypeArguments[0];
+	        return member.DeclaringType.GetGenericArguments()[0];
         }
     }
 }
