@@ -10,6 +10,10 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>LightMock is a simple mocking library that can be used on platforms that does not allow dynamic code generation.</description>        
         <copyright>Bernhard Richter</copyright>
-        <tags>Mocking Mock Xamarin iOS Android</tags>        
-    </metadata>   
+        <tags>Mocking Mock Xamarin iOS Android</tags>     
+    </metadata>
+  <files>
+    <file src="bin\release\LightMock.dll" target="portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1"></file>
+    <file src="bin\release\LightMock.xml" target="portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1"></file>
+  </files>
 </package>
