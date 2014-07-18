@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>LightMock</id>
@@ -8,12 +8,12 @@
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>http://www.lightinject.net/#lightmock</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>LightMock is a simple mocking library that can be used on platforms that does not allow dynamic code generation.</description>        
+        <description>LightMock is a simple mocking library that can be used on platforms that does not allow dynamic code generation.</description>
         <copyright>Bernhard Richter</copyright>
-        <tags>Mocking Mock Xamarin iOS Android</tags>     
+        <tags>Mocking Mock Xamarin iOS Android</tags>
     </metadata>
-  <files>
-    <file src="bin\release\LightMock.dll" target="portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1"></file>
-    <file src="bin\release\LightMock.xml" target="portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1"></file>
-  </files>
+    <files>        
+        <file src="bin\release\LightMock.dll" target="lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\LightMock.dll" />
+        <file src="bin\release\LightMock.XML" target="lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\LightMock.XML" />
+    </files>
 </package>
