@@ -1,20 +1,17 @@
 ﻿using System;
+using System.Linq;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LightMock.Tests
 {
-    using System.Collections.Specialized;
-    using System.Linq;
-
-    using LightMock;
-
     [TestClass]
     public class MockContextTests
     {
         [TestMethod]
         public void Assert_Never_IsVerified()
         {
-            var mockContext = new MockContext<IFoo>();            
+            var mockContext = new MockContext<IFoo>();
             mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
         }
 
@@ -24,7 +21,7 @@ namespace LightMock.Tests
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
-            fooMock.Execute("SomeValue");            
+            fooMock.Execute("SomeValue");
             mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
         }
 
@@ -32,9 +29,9 @@ namespace LightMock.Tests
         public void Assert_Once_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
-            var fooMock = new FooMock(mockContext);            
-            fooMock.Execute("SomeValue");            
-            mockContext.Assert(f => f.Execute("SomeValue"));            
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"));
         }
 
         [TestMethod]
@@ -51,7 +48,7 @@ namespace LightMock.Tests
         [ExpectedException(typeof(InvalidOperationException))]
         public void Assert_WithoutInvocation_ThrowsException()
         {
-            var mockContext = new MockContext<IFoo>();            
+            var mockContext = new MockContext<IFoo>();
             mockContext.Assert(f => f.Execute("SomeValue"));
         }
 
@@ -88,7 +85,7 @@ namespace LightMock.Tests
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
-            fooMock.Execute("SomeValue");                        
+            fooMock.Execute("SomeValue");
             mockContext.Assert(f => f.Execute(The<string>.Is(s => s.StartsWith("Some"))), Invoked.Once);
         }
 
@@ -108,7 +105,7 @@ namespace LightMock.Tests
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
             fooMock.Execute("SomeValue");
-            mockContext.Assert(f => f.Execute(The<string>.IsAnyValue), Invoked.Once);                        
+            mockContext.Assert(f => f.Execute(The<string>.IsAnyValue), Invoked.Once);
         }
 
         [TestMethod]
@@ -120,8 +117,6 @@ namespace LightMock.Tests
             mockContext.Arrange(f => f.Execute("SomeValue")).Throws<InvalidOperationException>();
             fooMock.Execute("SomeValue");
         }
-
-       
 
         [TestMethod]
         public void Execute_ArrengedReturnValue_ReturnsValue()
@@ -139,7 +134,7 @@ namespace LightMock.Tests
         public void Execute_NoArrangement_ReturnsDefaultValue()
         {
             var mockContext = new MockContext<IFoo>();
-            var fooMock = new FooMock(mockContext);            
+            var fooMock = new FooMock(mockContext);
 
             string result = fooMock.Execute();
 
@@ -177,6 +172,24 @@ namespace LightMock.Tests
             fooMock.Execute(string.Empty);
 
             mockContext.Assert(f => f.Execute(string.Empty));
+        }
+
+        [TestMethod]
+        public void Execute_ArrengedReturnValue_ReturnsValueUsingLambda()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var outerVariable = " works";
+            mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Returns<string>(
+                a =>
+                {
+                    var r = a + outerVariable + "!";
+                    return r;
+                });
+
+            var result = fooMock.Execute("It");
+
+            Assert.AreEqual("It works!", result);
         }
     }
 }
