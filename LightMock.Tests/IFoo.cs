@@ -12,6 +12,8 @@
         string Execute(string first, string second);
         string Execute(string first, string second, string third);
         string Execute(string first, string second, string third, string fourth);
+
+        byte[] Execute(byte[] array);
     }
 
     public interface IBar

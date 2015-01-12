@@ -55,5 +55,10 @@
         {
             return context.Invoke(f => f.Execute(first, second, third, fourth));
         }
+
+        public byte[] Execute(byte[] array)
+        {
+            return context.Invoke((f => f.Execute(array)));
+        }
     }
 }

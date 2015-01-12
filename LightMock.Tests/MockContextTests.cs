@@ -158,9 +158,9 @@ namespace LightMock.Tests
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
 
-            fooMock.Execute(null);
+            fooMock.Execute((string)null);
 
-            mockContext.Assert(f => f.Execute(null));
+            mockContext.Assert(f => f.Execute((string)null));
         }
 
         [TestMethod]
@@ -175,7 +175,7 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
-        public void Execute_ArrengedReturnValue_ReturnsValueUsingLambda()
+        public void Execute_ArrangedReturnValue_ReturnsValueUsingLambda()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
@@ -190,6 +190,32 @@ namespace LightMock.Tests
             var result = fooMock.Execute("It");
 
             Assert.AreEqual("It works!", result);
+        }
+
+        [TestMethod]
+        public void Execute_ArrangedRuturnValue_ArrayLengthContraintSupport()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var inputData = Enumerable.Repeat((byte)1, 10).ToArray();
+            mockContext.Arrange(
+                f => f.Execute(The<byte[]>.Is(a => a.Length < 20)))
+                .Returns<byte[]>(a => a);
+            var result = fooMock.Execute(inputData);
+            Assert.AreEqual(inputData, result);
+        }
+
+        [TestMethod]
+        public void Execute_ArrangedRuturnValue_ArrayElementContraintSupport()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var inputData = new byte[] {1, 2, 3, 4, 5 };
+            mockContext.Arrange(
+                f => f.Execute(The<byte[]>.Is(a => a[4] == 5)))
+                .Returns<byte[]>(a => a);
+            var result = fooMock.Execute(inputData);
+            Assert.AreEqual(inputData, result);
         }
     }
 }
