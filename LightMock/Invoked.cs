@@ -75,7 +75,17 @@ namespace LightMock
         /// <returns>An <see cref="Invoked"/> instance that represent the expected number of invocations.</returns>
         public static Invoked AtLeast(int callCount)
         {
-            return new Invoked(i => i > 0);
+            return new Invoked(i => i >= callCount);
+        }
+
+        /// <summary>
+        /// Specifies that the mocked method should be invoked a given number of times.
+        /// </summary>
+        /// <param name="callCount">The expected number of times for the mocked method to be invoked.</param>
+        /// <returns>An <see cref="Invoked"/> instance that represent the expected number of invocations.</returns>
+        public static Invoked Exactly(int callCount)
+        {
+            return new Invoked(i => i == callCount);
         }
 
         /// <summary>

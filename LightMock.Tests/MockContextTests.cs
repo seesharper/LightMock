@@ -100,6 +100,75 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedAtLeast3TimesAnd2TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedAtLeast3TimesAnd3TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedAtLeast3TimesAnd4TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedExactly3TimesAnd2TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedExactly3TimesAnd3TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedExactly3TimesAnd4TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
         public void Assert_IsAnyValue_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
