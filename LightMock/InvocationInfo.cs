@@ -24,6 +24,9 @@
     https://github.com/seesharper/LightMock
     http://twitter.com/bernhardrichter
 ******************************************************************************/
+
+using System.Linq.Expressions;
+
 namespace LightMock
 {
     using System.Reflection;
@@ -40,18 +43,34 @@ namespace LightMock
         /// <param name="arguments">The arguments used to invoked the method.</param>
         public InvocationInfo(MethodInfo method, object[] arguments)
         {
-            Method = method;
+            Member = method;
             Arguments = arguments;
+            ExpressionType = ExpressionType.Call;
         }
 
         /// <summary>
-        /// Gets the invoked method.
+        /// Initializes a new instance of the <see cref="InvocationInfo"/> class.
         /// </summary>
-        public MethodInfo Method { get; private set; }
+        /// <param name="memberInfo">The invoked property member</param>
+        public InvocationInfo(MemberInfo memberInfo)
+        {
+            Member = memberInfo;
+            ExpressionType = ExpressionType.MemberAccess;
+        }
+
+        /// <summary>
+        /// Get the invoked member.
+        /// </summary>
+        public MemberInfo Member { get; private set; }
 
         /// <summary>
         /// Gets the arguments used to invoke the method.
         /// </summary>
-        public object[] Arguments { get; private set; }        
+        public object[] Arguments { get; private set; }
+
+        /// <summary>
+        /// Gets the expression type.
+        /// </summary>
+        public ExpressionType ExpressionType { get; private set; }
     }
 }

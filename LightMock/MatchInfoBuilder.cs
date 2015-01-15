@@ -24,6 +24,9 @@
     https://github.com/seesharper/LightMock
     http://twitter.com/bernhardrichter
 ******************************************************************************/
+
+using System;
+
 namespace LightMock
 {
     using System.Collections.ObjectModel;
@@ -51,9 +54,22 @@ namespace LightMock
         /// matching an argument value.</returns>      
         public MatchInfo Build(LambdaExpression expression)
         {
-            targetMethod = ((MethodCallExpression)expression.Body).Method;
-            Visit(expression);
-            return new MatchInfo(targetMethod, lambdaExpressions.ToArray());
+            var methodCallExpresssion = expression.Body as MethodCallExpression;
+            if (methodCallExpresssion != null)
+            {
+                targetMethod = methodCallExpresssion.Method;
+                Visit(expression);
+                return new MatchInfo(targetMethod, lambdaExpressions.ToArray());
+            }
+            var memberExpression = expression.Body as MemberExpression;
+            if (memberExpression != null)
+            {
+                var memberInfo = memberExpression.Member;
+                Visit(expression);
+                return new MatchInfo(memberInfo);
+            }
+
+            throw new NotSupportedException(string.Format("Expression type ({0}) not supported.", expression.Body.NodeType));
         }
         
         /// <summary>

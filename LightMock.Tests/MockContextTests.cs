@@ -286,5 +286,32 @@ namespace LightMock.Tests
             var result = fooMock.Execute(inputData);
             Assert.AreEqual(inputData, result);
         }
+
+        [TestMethod]
+        public void PropertySupport_ArrangeGetterReturnValue_IsVerified()
+        {
+            var mockContext = new MockContext<IProp>();
+            var propMock = new PropMock(mockContext);
+            mockContext.Arrange(x => x.ReadOnlyProperty).Returns(() => "result");
+
+            var propertyValue = propMock.ReadOnlyProperty;
+            Assert.AreEqual("result", propertyValue);
+        }
+
+        [TestMethod]
+        public void PropertySupport_ArrangeGetterAndSetter_IsVerified()
+        {
+            var mockContext = new MockContext<IProp>();
+            var propMock = new PropMock(mockContext);
+            mockContext.ArrangeProperty(x => x.TwoWayProperty);
+
+            var propertyValue = propMock.TwoWayProperty;
+            Assert.IsNull(propertyValue);
+
+            propMock.TwoWayProperty = "customValue";
+
+            propertyValue = propMock.TwoWayProperty;
+            Assert.AreEqual("customValue", propertyValue);
+        }
     }
 }
