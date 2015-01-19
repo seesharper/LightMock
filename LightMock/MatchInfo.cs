@@ -36,7 +36,7 @@ namespace LightMock
     /// </summary>
     internal class MatchInfo
     {
-        private readonly MethodInfo method;
+        private readonly MemberInfo member;
 
         private readonly LambdaExpression[] matchExpressions;
 
@@ -48,9 +48,20 @@ namespace LightMock
         /// represents matching argument values.</param>
         public MatchInfo(MethodInfo method, LambdaExpression[] matchExpressions)
         {
-            this.method = method;
+            this.member = method;
             this.matchExpressions = matchExpressions;
-        }                
+            ExpressionType = ExpressionType.Call;
+        }  
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MatchInfo"/> class.
+        /// </summary>
+        /// <param name="memberInfo">The target member to match.</param>
+        public MatchInfo(MemberInfo memberInfo)
+        {
+            member = memberInfo;
+            ExpressionType = ExpressionType.MemberAccess;
+        }
 
         /// <summary>
         /// Determines if the <paramref name="invocationInfo"/> matches this <see cref="MatchInfo"/>.
@@ -59,11 +70,15 @@ namespace LightMock
         /// <returns><b>True</b> if the <paramref name="invocationInfo"/> matches 
         /// this <see cref="MatchInfo"/>, otherwise, <b>False</b>.</returns>
         public bool Matches(InvocationInfo invocationInfo)
-        {            
-            if (method != invocationInfo.Method)
+        {
+            if (ExpressionType != invocationInfo.ExpressionType) return false;
+            
+            if (member != invocationInfo.Member)
             {
                 return false;
             }
+
+            if (ExpressionType == ExpressionType.MemberAccess) return true;
 
             if (matchExpressions.Length != invocationInfo.Arguments.Length)
             {
@@ -72,5 +87,10 @@ namespace LightMock
 
             return !matchExpressions.Where((t, i) => !(bool)t.Execute(invocationInfo.Arguments[i])).Any();
         }
+
+        /// <summary>
+        /// Gets the expression type.
+        /// </summary>
+        public ExpressionType ExpressionType { get; private set; }
     }
 }

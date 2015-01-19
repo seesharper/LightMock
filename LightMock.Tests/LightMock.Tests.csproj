@@ -56,6 +56,7 @@
     <Compile Include="ExpressionExtensions.cs" />
     <Compile Include="FooMock.cs" />
     <Compile Include="IFoo.cs" />
+    <Compile Include="PropMock.cs" />
     <Compile Include="MockContextTests.cs" />
     <Compile Include="MatchInfoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

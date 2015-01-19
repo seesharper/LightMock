@@ -54,5 +54,14 @@ namespace LightMock
         /// <returns>An instance of <typeparamref name="TResult"/> or possibly null 
         /// if <typeparamref name="TResult"/> a reference type.</returns>
         TResult Invoke<TResult>(Expression<Func<TMock, TResult>> expression);
+
+        /// <summary>
+        /// Tracks that the setter represented by the <paramref name="expression"/>
+        /// has been invoked.
+        /// </summary>
+        /// <param name="expression">The <see cref="Expression{TDelegate}"/> that 
+        /// represents the setter that has been invoked.</param>
+        /// <param name="value">The value</param>
+        void InvokeSetter<TResult>(Expression<Func<TMock, TResult>> expression, object value);
     }
 }

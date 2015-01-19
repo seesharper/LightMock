@@ -24,6 +24,9 @@
     https://github.com/seesharper/LightMock
     http://twitter.com/bernhardrichter
 ******************************************************************************/
+
+using System;
+
 namespace LightMock
 {
     using System.Collections.ObjectModel;
@@ -52,11 +55,24 @@ namespace LightMock
         /// the target method and the arguments used to invoke the method.</returns>
         public InvocationInfo Build(LambdaExpression expression)
         {
-            targetMethod = ((MethodCallExpression)expression.Body).Method;
-            arguments = new Collection<object>();            
-            Visit(expression);            
-            
-            return new InvocationInfo(targetMethod, arguments.ToArray());
+            var methodCallExpresssion = expression.Body as MethodCallExpression;
+            if (methodCallExpresssion != null)
+            {
+                targetMethod = methodCallExpresssion.Method;
+                arguments = new Collection<object>();
+                Visit(expression);
+
+                return new InvocationInfo(targetMethod, arguments.ToArray()); 
+            }
+            var memberExpression = expression.Body as MemberExpression;
+            if (memberExpression != null)
+            {
+                var memberInfo = memberExpression.Member; 
+                Visit(expression);
+                return new InvocationInfo(memberInfo);
+            }
+
+            throw new NotSupportedException(string.Format("Expression type ({0}) not supported.", expression.Body.NodeType));
         }
 
         /// <summary>

@@ -1,4 +1,6 @@
-﻿namespace ExpressionReflect
+﻿using System.Collections;
+
+namespace ExpressionReflect
 {
 	using System;
 	using System.Collections.Generic;
@@ -283,8 +285,8 @@
 						value = values.First() ?? values.Last();
 						break;
 					case ExpressionType.ArrayIndex:
-						object[] array = (object[])values.First();
-						value = array[Convert.ToInt64(values.Last())];
+						var array = (IList)values.First();
+						value = array[Convert.ToInt32(values.Last())];
 						break;
 					default:
 						throw new ArgumentOutOfRangeException();
@@ -352,7 +354,7 @@
 						result = checked(Convert.ChangeType(value, u.Type, CultureInfo.InvariantCulture));
 						break;
 					case ExpressionType.ArrayLength:
-						result = ((object[])value).Length;
+						result = ((Array)value).Length;
 						break;
 					case ExpressionType.TypeAs:
 						try

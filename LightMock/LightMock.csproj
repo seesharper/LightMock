@@ -54,6 +54,7 @@
     <Compile Include="MockContext.cs" />
     <Compile Include="MatchInfoBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyArrangement.cs" />
     <Compile Include="The.cs" />
     <Compile Include="Invoked.cs" />
   </ItemGroup>

@@ -1,20 +1,17 @@
 ﻿using System;
+using System.Linq;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LightMock.Tests
 {
-    using System.Collections.Specialized;
-    using System.Linq;
-
-    using LightMock;
-
     [TestClass]
     public class MockContextTests
     {
         [TestMethod]
         public void Assert_Never_IsVerified()
         {
-            var mockContext = new MockContext<IFoo>();            
+            var mockContext = new MockContext<IFoo>();
             mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
         }
 
@@ -24,7 +21,7 @@ namespace LightMock.Tests
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
-            fooMock.Execute("SomeValue");            
+            fooMock.Execute("SomeValue");
             mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Never);
         }
 
@@ -32,9 +29,9 @@ namespace LightMock.Tests
         public void Assert_Once_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
-            var fooMock = new FooMock(mockContext);            
-            fooMock.Execute("SomeValue");            
-            mockContext.Assert(f => f.Execute("SomeValue"));            
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"));
         }
 
         [TestMethod]
@@ -51,7 +48,7 @@ namespace LightMock.Tests
         [ExpectedException(typeof(InvalidOperationException))]
         public void Assert_WithoutInvocation_ThrowsException()
         {
-            var mockContext = new MockContext<IFoo>();            
+            var mockContext = new MockContext<IFoo>();
             mockContext.Assert(f => f.Execute("SomeValue"));
         }
 
@@ -88,7 +85,7 @@ namespace LightMock.Tests
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
-            fooMock.Execute("SomeValue");                        
+            fooMock.Execute("SomeValue");
             mockContext.Assert(f => f.Execute(The<string>.Is(s => s.StartsWith("Some"))), Invoked.Once);
         }
 
@@ -103,12 +100,81 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedAtLeast3TimesAnd2TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedAtLeast3TimesAnd3TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedAtLeast3TimesAnd4TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.AtLeast(3));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedExactly3TimesAnd2TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
+        public void Assert_ExpectedExactly3TimesAnd3TimesInvoked_IsVerified()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Assert_ExpectedExactly3TimesAnd4TimesInvoked_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            fooMock.Execute("SomeValue");
+            mockContext.Assert(f => f.Execute("SomeValue"), Invoked.Exactly(3));
+        }
+
+        [TestMethod]
         public void Assert_IsAnyValue_IsVerified()
         {
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
             fooMock.Execute("SomeValue");
-            mockContext.Assert(f => f.Execute(The<string>.IsAnyValue), Invoked.Once);                        
+            mockContext.Assert(f => f.Execute(The<string>.IsAnyValue), Invoked.Once);
         }
 
         [TestMethod]
@@ -120,8 +186,6 @@ namespace LightMock.Tests
             mockContext.Arrange(f => f.Execute("SomeValue")).Throws<InvalidOperationException>();
             fooMock.Execute("SomeValue");
         }
-
-       
 
         [TestMethod]
         public void Execute_ArrengedReturnValue_ReturnsValue()
@@ -139,7 +203,7 @@ namespace LightMock.Tests
         public void Execute_NoArrangement_ReturnsDefaultValue()
         {
             var mockContext = new MockContext<IFoo>();
-            var fooMock = new FooMock(mockContext);            
+            var fooMock = new FooMock(mockContext);
 
             string result = fooMock.Execute();
 
@@ -163,9 +227,9 @@ namespace LightMock.Tests
             var mockContext = new MockContext<IFoo>();
             var fooMock = new FooMock(mockContext);
 
-            fooMock.Execute(null);
+            fooMock.Execute((string)null);
 
-            mockContext.Assert(f => f.Execute(null));
+            mockContext.Assert(f => f.Execute((string)null));
         }
 
         [TestMethod]
@@ -177,6 +241,77 @@ namespace LightMock.Tests
             fooMock.Execute(string.Empty);
 
             mockContext.Assert(f => f.Execute(string.Empty));
+        }
+
+        [TestMethod]
+        public void Execute_ArrangedReturnValue_ReturnsValueUsingLambda()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var outerVariable = " works";
+            mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Returns<string>(
+                a =>
+                {
+                    var r = a + outerVariable + "!";
+                    return r;
+                });
+
+            var result = fooMock.Execute("It");
+
+            Assert.AreEqual("It works!", result);
+        }
+
+        [TestMethod]
+        public void Execute_ArrangedRuturnValue_ArrayLengthContraintSupport()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var inputData = Enumerable.Repeat((byte)1, 10).ToArray();
+            mockContext.Arrange(
+                f => f.Execute(The<byte[]>.Is(a => a.Length < 20)))
+                .Returns<byte[]>(a => a);
+            var result = fooMock.Execute(inputData);
+            Assert.AreEqual(inputData, result);
+        }
+
+        [TestMethod]
+        public void Execute_ArrangedRuturnValue_ArrayElementContraintSupport()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            var inputData = new byte[] {1, 2, 3, 4, 5 };
+            mockContext.Arrange(
+                f => f.Execute(The<byte[]>.Is(a => a[4] == 5)))
+                .Returns<byte[]>(a => a);
+            var result = fooMock.Execute(inputData);
+            Assert.AreEqual(inputData, result);
+        }
+
+        [TestMethod]
+        public void PropertySupport_ArrangeGetterReturnValue_IsVerified()
+        {
+            var mockContext = new MockContext<IProp>();
+            var propMock = new PropMock(mockContext);
+            mockContext.Arrange(x => x.ReadOnlyProperty).Returns(() => "result");
+
+            var propertyValue = propMock.ReadOnlyProperty;
+            Assert.AreEqual("result", propertyValue);
+        }
+
+        [TestMethod]
+        public void PropertySupport_ArrangeGetterAndSetter_IsVerified()
+        {
+            var mockContext = new MockContext<IProp>();
+            var propMock = new PropMock(mockContext);
+            mockContext.ArrangeProperty(x => x.TwoWayProperty);
+
+            var propertyValue = propMock.TwoWayProperty;
+            Assert.IsNull(propertyValue);
+
+            propMock.TwoWayProperty = "customValue";
+
+            propertyValue = propMock.TwoWayProperty;
+            Assert.AreEqual("customValue", propertyValue);
         }
     }
 }
