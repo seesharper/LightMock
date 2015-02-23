@@ -188,6 +188,18 @@ namespace LightMock.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Arrange_ExceptionFactory_ThrowsException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            mockContext.Arrange(f => f.Execute("SomeValue")).Throws(() => new InvalidOperationException());
+            fooMock.Execute("SomeValue");
+        }
+
+
+
+        [TestMethod]
         public void Execute_ArrengedReturnValue_ReturnsValue()
         {
             var mockContext = new MockContext<IFoo>();

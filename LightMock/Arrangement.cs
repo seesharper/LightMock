@@ -58,6 +58,16 @@ namespace LightMock
         }
 
         /// <summary>
+        /// Arranges for an <see cref="Exception"/> of type <typeparamref name="TException"/> to be thrown.
+        /// </summary>
+        /// <typeparam name="TException">The type of <see cref="Exception"/> to be thrown.</typeparam>
+        /// <param name="factory">A factory delegate used to create the <typeparamref name="TException"/> instance.</param>
+        public void Throws<TException>(Func<TException> factory) where TException : Exception
+        {
+            actions.Add(args => { throw factory(); });
+        }
+
+        /// <summary>
         /// Arranges for the <paramref name="callBack"/> to be called when the mocked method is invoked.
         /// </summary>
         /// <param name="callBack">The <see cref="Action"/> to be called when the mocked method is invoked.</param>
