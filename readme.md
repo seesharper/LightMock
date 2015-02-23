@@ -108,6 +108,14 @@ Throw an exception
 	mockContext.Arrange(f => f.Execute("SomeValue")).Throws<InvalidOperationException>();
 	fooMock.Execute("SomeValue");
 
+Throw an exception using a exception factory.
+
+    var mockContext = new MockContext<IFoo>();
+    var fooMock = new FooMock(mockContext);
+    mockContext.Arrange(f => f.Execute("SomeValue")).Throws(() => new InvalidOperationException());
+    fooMock.Execute("SomeValue");
+
+
 Execute a callback
 
 	var mockContext = new MockContext<IFoo>();
