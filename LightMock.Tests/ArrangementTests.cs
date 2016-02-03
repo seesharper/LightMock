@@ -98,6 +98,71 @@
         }
 
         [TestMethod]
+        public void Arrange_CallBackFiveArguments_InvokesCallback()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            int firstResult = 0;
+            int secondResult = 0;
+            int thirdResult = 0;
+            int fourthResult = 0;
+            int fifthResult = 0;
+            mockContext.Arrange(
+                f => f.Execute(The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue))
+                .Callback<int, int, int, int, int>(
+                    (i1, i2, i3, i4, i5) =>
+                    {
+                        firstResult = i1;
+                        secondResult = i2;
+                        thirdResult = i3;
+                        fourthResult = i4;
+                        fifthResult = i5;
+                    });
+
+            fooMock.Execute(1, 2, 3, 4, 5);
+
+            Assert.AreEqual(1, firstResult);
+            Assert.AreEqual(2, secondResult);
+            Assert.AreEqual(3, thirdResult);
+            Assert.AreEqual(4, fourthResult);
+            Assert.AreEqual(5, fifthResult);
+        }
+
+        [TestMethod]
+        public void Arrange_CallBackSixArguments_InvokesCallback()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+            int firstResult = 0;
+            int secondResult = 0;
+            int thirdResult = 0;
+            int fourthResult = 0;
+            int fifthResult = 0;
+            int sixthResult = 0;
+            mockContext.Arrange(
+                f => f.Execute(The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue, The<int>.IsAnyValue))
+                .Callback<int, int, int, int, int, int>(
+                    (i1, i2, i3, i4, i5, i6) =>
+                    {
+                        firstResult = i1;
+                        secondResult = i2;
+                        thirdResult = i3;
+                        fourthResult = i4;
+                        fifthResult = i5;
+                        sixthResult = i6;
+                    });
+
+            fooMock.Execute(1, 2, 3, 4, 5, 6);
+
+            Assert.AreEqual(1, firstResult);
+            Assert.AreEqual(2, secondResult);
+            Assert.AreEqual(3, thirdResult);
+            Assert.AreEqual(4, fourthResult);
+            Assert.AreEqual(5, fifthResult);
+            Assert.AreEqual(6, sixthResult);
+        }
+
+        [TestMethod]
         public void Arrange_ReturnsWithNoArguments_InvokesGetResult()
         {
             var mockContext = new MockContext<IFoo>();

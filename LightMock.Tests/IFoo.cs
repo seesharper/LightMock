@@ -6,6 +6,8 @@
         void Execute(int first, int second);
         void Execute(int first, int second, int third);
         void Execute(int first, int second, int third, int fourth);
+        void Execute(int first, int second, int third, int fourth, int fifth);
+        void Execute(int first, int second, int third, int fourth, int fifth, int sixth);
 
         string Execute();
         string Execute(string value);

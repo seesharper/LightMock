@@ -36,6 +36,15 @@
             context.Invoke(f => f.Execute(first, second, third, fourth));
         }
 
+        public void Execute(int first, int second, int third, int fourth, int fifth)
+        {
+            context.Invoke(f => f.Execute(first, second, third, fourth, fifth));
+        }
+        public void Execute(int first, int second, int third, int fourth, int fifth, int sixth)
+        {
+            context.Invoke(f => f.Execute(first, second, third, fourth, fifth, sixth));
+        }
+
         public string Execute()
         {
             return context.Invoke(f => f.Execute());
