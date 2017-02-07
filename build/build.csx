@@ -14,9 +14,9 @@ string pathToBuildDirectory = @"tmp/";
 
 
 
-//DotNet.Build("../src/LightMock.sln","");
+DotNet.Build("../src/LightMock.sln");
 
-MsBuild.Build("../src/LightMock.sln");
+//MsBuild.Build("../src/LightMock.sln");
 
 
 // Execute(() => InitializBuildDirectories(), "Preparing build directories");
