@@ -9,7 +9,7 @@ build_script:
     scriptcs build.csx -debug
 test: off
 artifacts:
-- path: build/tmp/*.nupkg
+- path: src/LightMock/bin/release/*.nupkg
   name: NuGet Packages
 deploy:
   provider: NuGet  
