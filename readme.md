@@ -19,7 +19,7 @@ The **LightMock** library is a a portable class library that makes it possible t
    
 Even though the mock objects are created manually, they can be reused in many scenarios.
 
-As an an example we will use this simple interface.
+As an example we will use this simple interface.
 
     public interface IFoo
     {
