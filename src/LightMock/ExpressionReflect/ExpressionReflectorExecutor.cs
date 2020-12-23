@@ -4,14 +4,16 @@ namespace ExpressionReflect
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Globalization;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
 	using System.Linq;
 	using System.Linq.Expressions;
 	using System.Reflection;
 
-	/// <summary>
-	/// An expression visitor that translates the expression tree to reflection calls.
-	/// </summary>
+    /// <summary>
+    /// An expression visitor that translates the expression tree to reflection calls.
+    /// </summary>
+    [ExcludeFromCodeCoverage]
 	internal sealed class ExpressionReflectionExecutor : ExpressionVisitor
 	{
 		private IDictionary<string, object> args = new Dictionary<string, object>();
@@ -84,7 +86,7 @@ namespace ExpressionReflect
 			}
 
 			var executor = new ExpressionReflectionExecutor(node);
-			
+
             Type[] genericArguments = type.GenericTypeArguments;
             MethodInfo methodInfo = this.FindMethod(methodName, genericArguments);
             @delegate = methodInfo.CreateDelegate(type, executor);

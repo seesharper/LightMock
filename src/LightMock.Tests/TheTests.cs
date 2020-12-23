@@ -1,20 +1,19 @@
-﻿namespace LightMock.Tests
-{
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
-    [TestClass]
+namespace LightMock.Tests
+{
     public class TheTests
     {
-        [TestMethod]
+        [Fact]
         public void IsAnyValue_ReturnsDefaultValue()
         {
-            Assert.AreEqual(default(string), The<string>.IsAnyValue);            
+            Assert.Equal(default(string), The<string>.IsAnyValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void Is_AnyPredicate_ReturnsDefaultValue()
         {
-            Assert.AreEqual(default(string), The<string>.Is(s => true));            
+            Assert.Equal(default(string), The<string>.Is(s => true));
         }
     }
 }

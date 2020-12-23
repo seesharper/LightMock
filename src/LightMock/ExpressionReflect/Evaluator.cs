@@ -2,14 +2,16 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Linq.Expressions;
-	
+    using System.Diagnostics.CodeAnalysis;
+    using System.Linq.Expressions;
+
 	/// <summary>
 	/// Enables the partial evaluation of queries.
 	/// </summary>
 	/// <remarks>
 	/// From http://msdn.microsoft.com/en-us/library/bb546158.aspx
-	/// </remarks>	
+	/// </remarks>
+	[ExcludeFromCodeCoverage]
 	public static class Evaluator
 	{
 		/// <summary>

@@ -1,6 +1,30 @@
+#load "nuget:Dotnet.Build, 0.12.1"
+#load "nuget:dotnet-steps, 0.0.2"
 
-#load "common.csx"
+BuildContext.CodeCoverageThreshold = 70;
 
-Execute(() => DotNet.Build("../src/LightMock.sln"), "Building");
-Execute(() => DotNet.Test("../src/LightMock.Tests/LightMock.Tests.csproj"), "Testing");
-Execute(() => DotNet.Pack("../src/LightMock/LightMock.csproj"), "Packing");
+[StepDescription("Runs the tests with test coverage")]
+Step codecoverage = () => DotNet.TestWithCodeCoverage();
+
+[StepDescription("Runs all the tests for all target frameworks")]
+Step test = () => DotNet.Test();
+
+[StepDescription("Creates all artifacts")]
+Step pack = () =>
+{
+    test();
+    codecoverage();
+    DotNet.Pack();
+    DotNet.Publish();
+};
+
+[DefaultStep]
+[StepDescription("Ships all artifacts")]
+AsyncStep ship = async () =>
+{
+    pack();
+    await Artifacts.Deploy();
+};
+
+await StepRunner.Execute(Args);
+return 0;
