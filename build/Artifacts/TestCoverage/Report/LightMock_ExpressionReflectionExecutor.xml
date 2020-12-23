@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="ExpressionReflect.ExpressionReflectionExecutor">
+  <Summary>
+    <Class>ExpressionReflect.ExpressionReflectionExecutor</Class>
+    <Assembly>LightMock</Assembly>
+    <Files>
+      <File>/Users/bernhardrichter/GitHub/LightMock/src/LightMock/ExpressionReflect/ExpressionReflectorExecutor.cs</File>
+    </Files>
+    <Coveredlines>86</Coveredlines>
+    <Uncoveredlines>183</Uncoveredlines>
+    <Coverablelines>269</Coverablelines>
+    <Totallines>615</Totallines>
+    <Linecoverage>31.9</Linecoverage>
+    <Coveredbranches>28</Coveredbranches>
+    <Totalbranches>133</Totalbranches>
+    <Branchcoverage>21</Branchcoverage>
+  </Summary>
+  <Metrics>
+    <Element name="ctor">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Execute">
+      <Cyclomaticcomplexity>8</Cyclomaticcomplexity>
+      <Linecoverage>81.81</Linecoverage>
+      <Branchcoverage>75.00</Branchcoverage>
+    </Element>
+    <Element name="VisitLambda">
+      <Cyclomaticcomplexity>8</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="VisitParameter">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="VisitMember">
+      <Cyclomaticcomplexity>8</Cyclomaticcomplexity>
+      <Linecoverage>64.70</Linecoverage>
+      <Branchcoverage>62.50</Branchcoverage>
+    </Element>
+    <Element name="VisitMethodCall">
+      <Cyclomaticcomplexity>4</Cyclomaticcomplexity>
+      <Linecoverage>90.90</Linecoverage>
+      <Branchcoverage>75.00</Branchcoverage>
+    </Element>
+    <Element name="VisitInvocation">
+      <Cyclomaticcomplexity>4</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="VisitNew">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="VisitBinary">
+      <Cyclomaticcomplexity>53</Cyclomaticcomplexity>
+      <Linecoverage>29.31</Linecoverage>
+      <Branchcoverage>9.43</Branchcoverage>
+    </Element>
+    <Element name="VisitTypeBinary">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="VisitUnary">
+      <Cyclomaticcomplexity>22</Cyclomaticcomplexity>
+      <Linecoverage>41.37</Linecoverage>
+      <Branchcoverage>22.72</Branchcoverage>
+    </Element>
+    <Element name="VisitConditional">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="VisitConstant">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="VisitNewArray">
+      <Cyclomaticcomplexity>4</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="VisitMemberInit">
+      <Cyclomaticcomplexity>6</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="VisitListInit">
+      <Cyclomaticcomplexity>4</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="GetValuesFromStack">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="GetValueFromStack">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Initialize">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="InitializeArgs">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="FindMethod">
+      <Cyclomaticcomplexity>6</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>0</Branchcoverage>
+    </Element>
+    <Element name="Func">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Func">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Func">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Func">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Action">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Action">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Action">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Action">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Action">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Predicate">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="ExecuteReflector">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>0</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+  </Metrics>
+  <Files>
+    <File name="/Users/bernhardrichter/GitHub/LightMock/src/LightMock/ExpressionReflect/ExpressionReflectorExecutor.cs">
+      <LineAnalysis line="1" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="using System.Collections;" />
+      <LineAnalysis line="2" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="3" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="namespace ExpressionReflect" />
+      <LineAnalysis line="4" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="{" />
+      <LineAnalysis line="5" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System;" />
+      <LineAnalysis line="6" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Collections.Generic;" />
+      <LineAnalysis line="7" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Globalization;" />
+      <LineAnalysis line="8" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Linq;" />
+      <LineAnalysis line="9" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Linq.Expressions;" />
+      <LineAnalysis line="10" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Reflection;" />
+      <LineAnalysis line="11" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="12" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;/// &lt;summary&gt;" />
+      <LineAnalysis line="13" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;/// An expression visitor that translates the expression tree to reflection calls." />
+      <LineAnalysis line="14" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;/// &lt;/summary&gt;" />
+      <LineAnalysis line="15" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;internal sealed class ExpressionReflectionExecutor : ExpressionVisitor" />
+      <LineAnalysis line="16" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;{" />
+      <LineAnalysis line="17" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;private IDictionary&lt;string, object&gt; args = new Dictionary&lt;string, object&gt;();" />
+      <LineAnalysis line="18" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;private readonly Stack&lt;object&gt; data = new Stack&lt;object&gt;();" />
+      <LineAnalysis line="19" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;private readonly Stack&lt;LambdaExpression&gt; nestedLambdas = new Stack&lt;LambdaExpression&gt;();" />
+      <LineAnalysis line="20" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="21" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private readonly Expression targetExpression;" />
+      <LineAnalysis line="22" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private object[] passedArgumentValues;" />
+      <LineAnalysis line="23" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="24" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="25" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;public ExpressionReflectionExecutor(Expression targetExpression)" />
+      <LineAnalysis line="26" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="27" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.targetExpression = targetExpression;" />
+      <LineAnalysis line="28" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="29" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="30" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;summary&gt;" />
+      <LineAnalysis line="31" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// The entry point for the evaluation." />
+      <LineAnalysis line="32" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;/summary&gt;" />
+      <LineAnalysis line="33" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;param name=&quot;returnsValue&quot;&gt;Flag, indicating if the expression returns a value. The default is &lt;c&gt;true&lt;/c&gt;.&lt;/param&gt;" />
+      <LineAnalysis line="34" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;returns&gt;The result of the expression.&lt;/returns&gt;" />
+      <LineAnalysis line="35" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;internal object Execute(object[] passedArgumentValues, bool returnsValue = true)" />
+      <LineAnalysis line="36" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="37" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.passedArgumentValues = passedArgumentValues;" />
+      <LineAnalysis line="38" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Initialize();" />
+      <LineAnalysis line="39" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.Visit(((LambdaExpression)targetExpression).Body);" />
+      <LineAnalysis line="40" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="41" visits="140" coverage="PartiallyCovered" coveredbranches="1" totalbranches="2" content="&#x9;&#x9;&#x9;if (this.data.Count &gt; 1)" />
+      <LineAnalysis line="42" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="43" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;throw new ExpressionExecutionException(&quot;The stack contained too much elements.&quot;);" />
+      <LineAnalysis line="44" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="45" visits="140" coverage="PartiallyCovered" coveredbranches="3" totalbranches="4" content="&#x9;&#x9;&#x9;if (returnsValue &amp;&amp; this.data.Count &lt; 1)" />
+      <LineAnalysis line="46" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="47" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;throw new ExpressionExecutionException(&quot;The stack contained too few elements.&quot;);" />
+      <LineAnalysis line="48" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="49" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="50" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value = null;" />
+      <LineAnalysis line="51" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="52" visits="140" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;if (returnsValue)" />
+      <LineAnalysis line="53" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="54" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;value = this.GetValueFromStack();" />
+      <LineAnalysis line="55" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="56" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="57" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return value;" />
+      <LineAnalysis line="58" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="59" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="60" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitLambda&lt;T&gt;(Expression&lt;T&gt; node)" />
+      <LineAnalysis line="61" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="62" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="63" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Delegate @delegate = null;" />
+      <LineAnalysis line="64" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="65" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;string methodName = null;" />
+      <LineAnalysis line="66" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="67" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Type type = node.Type;" />
+      <LineAnalysis line="68" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;if (type.IsFunc())" />
+      <LineAnalysis line="69" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="70" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;methodName = &quot;Func&quot;;" />
+      <LineAnalysis line="71" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="72" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;else if (type.IsAction())" />
+      <LineAnalysis line="73" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="74" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;methodName = &quot;Action&quot;;" />
+      <LineAnalysis line="75" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="76" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;else if (type.IsPredicate())" />
+      <LineAnalysis line="77" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="78" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;methodName = &quot;Predicate&quot;;" />
+      <LineAnalysis line="79" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="80" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="81" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;if (string.IsNullOrWhiteSpace(methodName))" />
+      <LineAnalysis line="82" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="83" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;throw new ExpressionExecutionException(string.Format(&quot;No wrapper method available for delegate type '{0}'&quot;, type.Name));" />
+      <LineAnalysis line="84" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="85" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="86" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;var executor = new ExpressionReflectionExecutor(node);" />
+      <LineAnalysis line="87" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="88" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="            Type[] genericArguments = type.GenericTypeArguments;" />
+      <LineAnalysis line="89" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="            MethodInfo methodInfo = this.FindMethod(methodName, genericArguments);" />
+      <LineAnalysis line="90" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="            @delegate = methodInfo.CreateDelegate(type, executor);" />
+      <LineAnalysis line="91" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="92" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return this.VisitConstant(Expression.Constant(@delegate));" />
+      <LineAnalysis line="93" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="94" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="95" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="96" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="97" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitParameter(ParameterExpression p)" />
+      <LineAnalysis line="98" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="99" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitParameter(p);" />
+      <LineAnalysis line="100" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="101" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object argument = this.args[p.Name];" />
+      <LineAnalysis line="102" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(argument);" />
+      <LineAnalysis line="103" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="104" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="105" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="106" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="107" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitMember(MemberExpression node)" />
+      <LineAnalysis line="108" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="109" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitMember(node);" />
+      <LineAnalysis line="110" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;MemberInfo memberInfo = node.Member;" />
+      <LineAnalysis line="111" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="112" visits="72" coverage="PartiallyCovered" coveredbranches="1" totalbranches="2" content="&#x9;&#x9;&#x9;if (memberInfo is PropertyInfo)" />
+      <LineAnalysis line="113" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="114" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object target = null;" />
+      <LineAnalysis line="115" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;if (!((PropertyInfo)memberInfo).GetMethod.IsStatic)" />
+      <LineAnalysis line="116" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="117" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;target = this.GetValueFromStack();" />
+      <LineAnalysis line="118" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="119" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;PropertyInfo propertyInfo = (PropertyInfo)memberInfo;" />
+      <LineAnalysis line="120" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object value = propertyInfo.GetValue(target, null);" />
+      <LineAnalysis line="121" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="122" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="123" visits="72" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;if (memberInfo is FieldInfo)" />
+      <LineAnalysis line="124" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="125" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object target = null;" />
+      <LineAnalysis line="126" visits="72" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;if (!((FieldInfo)memberInfo).IsStatic)" />
+      <LineAnalysis line="127" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="128" visits="71" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;target = this.GetValueFromStack();" />
+      <LineAnalysis line="129" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="130" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;FieldInfo fieldInfo = (FieldInfo)memberInfo;" />
+      <LineAnalysis line="131" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object value = fieldInfo.GetValue(target);" />
+      <LineAnalysis line="132" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="133" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="134" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="135" visits="72" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="136" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="137" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="138" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitMethodCall(MethodCallExpression m)" />
+      <LineAnalysis line="139" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="140" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitMethodCall(m);" />
+      <LineAnalysis line="141" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="142" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object target = null;" />
+      <LineAnalysis line="143" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object[] parameterValues = this.GetValuesFromStack(m.Arguments.Count);" />
+      <LineAnalysis line="144" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="145" visits="1" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;if (m.Object != null)" />
+      <LineAnalysis line="146" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="147" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;target = this.GetValueFromStack();" />
+      <LineAnalysis line="148" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="149" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="150" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// If expression is null the call is static, so the target must and will be null." />
+      <LineAnalysis line="151" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;MethodInfo methodInfo = m.Method;" />
+      <LineAnalysis line="152" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value = methodInfo.Invoke(target, parameterValues);" />
+      <LineAnalysis line="153" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="154" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="155" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="156" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Remove the nested lambda expression from stack after method execution." />
+      <LineAnalysis line="157" visits="1" coverage="PartiallyCovered" coveredbranches="1" totalbranches="2" content="&#x9;&#x9;&#x9;if (this.nestedLambdas.Any())" />
+      <LineAnalysis line="158" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="159" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;this.nestedLambdas.Pop();" />
+      <LineAnalysis line="160" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="161" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="162" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="163" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="164" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="165" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitInvocation(InvocationExpression node)" />
+      <LineAnalysis line="166" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="167" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitInvocation(node);" />
+      <LineAnalysis line="168" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="169" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value = null;" />
+      <LineAnalysis line="170" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="171" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;if (node.Expression is MemberExpression)" />
+      <LineAnalysis line="172" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="173" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object[] arguments = this.GetValuesFromStack(node.Arguments.Count);" />
+      <LineAnalysis line="174" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="175" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;// Use the delegate on the stack. The constant expression visitor pushed it there." />
+      <LineAnalysis line="176" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;value = this.GetValueFromStack();" />
+      <LineAnalysis line="177" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="178" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;if (value is Delegate)" />
+      <LineAnalysis line="179" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="180" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;Delegate del = (Delegate)value;" />
+      <LineAnalysis line="181" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;value = del.DynamicInvoke(arguments);" />
+      <LineAnalysis line="182" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="183" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="184" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="185" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="186" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="187" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="188" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="189" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="190" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitNew(NewExpression nex)" />
+      <LineAnalysis line="191" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="192" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitNew(nex);" />
+      <LineAnalysis line="193" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="194" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;ConstructorInfo constructorInfo = nex.Constructor;" />
+      <LineAnalysis line="195" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object[] parameterValues = this.GetValuesFromStack(nex.Arguments.Count);" />
+      <LineAnalysis line="196" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="197" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value = constructorInfo.Invoke(parameterValues.ToArray());" />
+      <LineAnalysis line="198" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="199" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="200" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="201" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="202" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="203" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitBinary(BinaryExpression b)" />
+      <LineAnalysis line="204" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="205" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitBinary(b);" />
+      <LineAnalysis line="206" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="207" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value;" />
+      <LineAnalysis line="208" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="209" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object[] values = this.GetValuesFromStack(2);" />
+      <LineAnalysis line="210" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="211" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;MethodInfo methodInfo = b.Method;" />
+      <LineAnalysis line="212" visits="35" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;if (methodInfo != null)" />
+      <LineAnalysis line="213" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="214" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;// If an operator method is available use it." />
+      <LineAnalysis line="215" visits="32" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;value = methodInfo.Invoke(null, values);" />
+      <LineAnalysis line="216" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="217" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;else" />
+      <LineAnalysis line="218" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="219" visits="3" coverage="PartiallyCovered" coveredbranches="3" totalbranches="45" content="&#x9;&#x9;&#x9;&#x9;switch (b.NodeType)" />
+      <LineAnalysis line="220" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="221" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Add:" />
+      <LineAnalysis line="222" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) + Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="223" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="224" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.AddChecked:" />
+      <LineAnalysis line="225" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = checked(Convert.ToDouble(values.First()) + Convert.ToDouble(values.Last()));" />
+      <LineAnalysis line="226" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="227" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Subtract:" />
+      <LineAnalysis line="228" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) - Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="229" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="230" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.SubtractChecked:" />
+      <LineAnalysis line="231" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = checked(Convert.ToDouble(values.First()) - Convert.ToDouble(values.Last()));" />
+      <LineAnalysis line="232" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="233" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Multiply:" />
+      <LineAnalysis line="234" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) * Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="235" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="236" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.MultiplyChecked:" />
+      <LineAnalysis line="237" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = checked(Convert.ToDouble(values.First()) * Convert.ToDouble(values.Last()));" />
+      <LineAnalysis line="238" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="239" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Divide:" />
+      <LineAnalysis line="240" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) / Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="241" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="242" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Modulo:" />
+      <LineAnalysis line="243" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) % Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="244" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="245" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Equal:" />
+      <LineAnalysis line="246" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Equals(values.First(), values.Last());" />
+      <LineAnalysis line="247" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="248" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.NotEqual:" />
+      <LineAnalysis line="249" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = !(values.First().Equals(values.Last()));" />
+      <LineAnalysis line="250" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="251" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.And:" />
+      <LineAnalysis line="252" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToBoolean(values.First()) &amp; Convert.ToBoolean(values.Last());" />
+      <LineAnalysis line="253" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="254" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.AndAlso:" />
+      <LineAnalysis line="255" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToBoolean(values.First()) &amp;&amp; Convert.ToBoolean(values.Last());" />
+      <LineAnalysis line="256" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="257" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Or:" />
+      <LineAnalysis line="258" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToBoolean(values.First()) | Convert.ToBoolean(values.Last());" />
+      <LineAnalysis line="259" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="260" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.OrElse:" />
+      <LineAnalysis line="261" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToBoolean(values.First()) || Convert.ToBoolean(values.Last());" />
+      <LineAnalysis line="262" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="263" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.ExclusiveOr:" />
+      <LineAnalysis line="264" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToBoolean(values.First()) ^ Convert.ToBoolean(values.Last());" />
+      <LineAnalysis line="265" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="266" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.LessThan:" />
+      <LineAnalysis line="267" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) &lt; Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="268" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="269" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.LessThanOrEqual:" />
+      <LineAnalysis line="270" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) &lt;= Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="271" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="272" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.GreaterThan:" />
+      <LineAnalysis line="273" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) &gt; Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="274" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="275" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.GreaterThanOrEqual:" />
+      <LineAnalysis line="276" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToDouble(values.First()) &gt;= Convert.ToDouble(values.Last());" />
+      <LineAnalysis line="277" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="278" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.RightShift:" />
+      <LineAnalysis line="279" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToInt64(values.First()) &gt;&gt; Convert.ToInt32(values.Last());" />
+      <LineAnalysis line="280" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="281" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.LeftShift:" />
+      <LineAnalysis line="282" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = Convert.ToInt64(values.First()) &lt;&lt; Convert.ToInt32(values.Last());" />
+      <LineAnalysis line="283" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="284" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Coalesce:" />
+      <LineAnalysis line="285" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = values.First() ?? values.Last();" />
+      <LineAnalysis line="286" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="287" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.ArrayIndex:" />
+      <LineAnalysis line="288" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var array = (IList)values.First();" />
+      <LineAnalysis line="289" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;value = array[Convert.ToInt32(values.Last())];" />
+      <LineAnalysis line="290" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="291" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;default:" />
+      <LineAnalysis line="292" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;throw new ArgumentOutOfRangeException();" />
+      <LineAnalysis line="293" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="294" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="295" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="296" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Type type = b.Type;" />
+      <LineAnalysis line="297" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;value = Convert.ChangeType(value, type, CultureInfo.InvariantCulture);" />
+      <LineAnalysis line="298" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="299" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="300" visits="35" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="301" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="302" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="303" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitTypeBinary(TypeBinaryExpression b)" />
+      <LineAnalysis line="304" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="305" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitTypeBinary(b);" />
+      <LineAnalysis line="306" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="307" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object target = this.GetValueFromStack();" />
+      <LineAnalysis line="308" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Type isType = b.TypeOperand;" />
+      <LineAnalysis line="309" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="310" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;bool value = isType.IsInstanceOfType(target);" />
+      <LineAnalysis line="311" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="312" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="313" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="314" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="315" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="316" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitUnary(UnaryExpression u)" />
+      <LineAnalysis line="317" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="318" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitUnary(u);" />
+      <LineAnalysis line="319" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="320" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object result;" />
+      <LineAnalysis line="321" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object value = this.GetValueFromStack();" />
+      <LineAnalysis line="322" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="323" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;MethodInfo methodInfo = u.Method;" />
+      <LineAnalysis line="324" visits="2" coverage="PartiallyCovered" coveredbranches="1" totalbranches="2" content="&#x9;&#x9;&#x9;if (methodInfo != null)" />
+      <LineAnalysis line="325" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="326" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;// If an operator method is available use it." />
+      <LineAnalysis line="327" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;result = methodInfo.Invoke(null, new object[] { value });" />
+      <LineAnalysis line="328" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="329" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;else" />
+      <LineAnalysis line="330" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="331" visits="2" coverage="PartiallyCovered" coveredbranches="4" totalbranches="18" content="&#x9;&#x9;&#x9;&#x9;switch (u.NodeType)" />
+      <LineAnalysis line="332" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="333" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Negate:" />
+      <LineAnalysis line="334" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = -Convert.ToDouble(value);" />
+      <LineAnalysis line="335" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="336" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.NegateChecked:" />
+      <LineAnalysis line="337" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = checked(-Convert.ToDouble(value));" />
+      <LineAnalysis line="338" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="339" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Not:" />
+      <LineAnalysis line="340" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (value is bool)" />
+      <LineAnalysis line="341" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="342" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = !Convert.ToBoolean(value);" />
+      <LineAnalysis line="343" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="344" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else" />
+      <LineAnalysis line="345" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="346" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = ~Convert.ToInt64(value);" />
+      <LineAnalysis line="347" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="348" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="349" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;//case ExpressionType.Quote:" />
+      <LineAnalysis line="350" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.Convert:" />
+      <LineAnalysis line="351" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = Convert.ChangeType(value, u.Type, CultureInfo.InvariantCulture);" />
+      <LineAnalysis line="352" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="353" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.ConvertChecked:" />
+      <LineAnalysis line="354" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = checked(Convert.ChangeType(value, u.Type, CultureInfo.InvariantCulture));" />
+      <LineAnalysis line="355" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="356" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.ArrayLength:" />
+      <LineAnalysis line="357" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = ((Array)value).Length;" />
+      <LineAnalysis line="358" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="359" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;case ExpressionType.TypeAs:" />
+      <LineAnalysis line="360" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try" />
+      <LineAnalysis line="361" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="362" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = Convert.ChangeType(value, u.Type, CultureInfo.InvariantCulture);" />
+      <LineAnalysis line="363" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="364" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (InvalidCastException)" />
+      <LineAnalysis line="365" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="366" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;result = null;" />
+      <LineAnalysis line="367" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="368" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="369" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;default:" />
+      <LineAnalysis line="370" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;throw new ArgumentOutOfRangeException();" />
+      <LineAnalysis line="371" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="372" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="373" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="374" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;result = Convert.ChangeType(result, u.Type, CultureInfo.InvariantCulture);" />
+      <LineAnalysis line="375" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(result);" />
+      <LineAnalysis line="376" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="377" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="378" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="379" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="380" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitConditional(ConditionalExpression c)" />
+      <LineAnalysis line="381" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="382" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitConditional(c);" />
+      <LineAnalysis line="383" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="384" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object ifFalse = this.GetValueFromStack();" />
+      <LineAnalysis line="385" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object ifTrue = this.GetValueFromStack();" />
+      <LineAnalysis line="386" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;bool test = (bool)this.GetValueFromStack();" />
+      <LineAnalysis line="387" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="388" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;object value = test ? ifTrue : ifFalse;" />
+      <LineAnalysis line="389" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(value);" />
+      <LineAnalysis line="390" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="391" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="392" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="393" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="394" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitConstant(ConstantExpression c)" />
+      <LineAnalysis line="395" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="396" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(c.Value);" />
+      <LineAnalysis line="397" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return base.VisitConstant(c);" />
+      <LineAnalysis line="398" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="399" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="400" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitNewArray(NewArrayExpression na)" />
+      <LineAnalysis line="401" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="402" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitNewArray(na);" />
+      <LineAnalysis line="403" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="404" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Array newArray;" />
+      <LineAnalysis line="405" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Type type = na.Type.GetElementType();" />
+      <LineAnalysis line="406" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="407" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="4" content="&#x9;&#x9;&#x9;switch (na.NodeType)" />
+      <LineAnalysis line="408" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="409" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;case ExpressionType.NewArrayBounds:" />
+      <LineAnalysis line="410" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;int length = (int)this.GetValueFromStack();" />
+      <LineAnalysis line="411" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;newArray = Array.CreateInstance(type, length);" />
+      <LineAnalysis line="412" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="413" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;case ExpressionType.NewArrayInit:" />
+      <LineAnalysis line="414" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;Array arrayValues = this.GetValuesFromStack(na.Expressions.Count);" />
+      <LineAnalysis line="415" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;newArray = Array.CreateInstance(type, arrayValues.Length);" />
+      <LineAnalysis line="416" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;Array.Copy(arrayValues, newArray, arrayValues.Length);" />
+      <LineAnalysis line="417" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="418" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;default:" />
+      <LineAnalysis line="419" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;throw new ArgumentOutOfRangeException();" />
+      <LineAnalysis line="420" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="421" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="422" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(newArray);" />
+      <LineAnalysis line="423" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="424" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="425" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="426" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="427" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitMemberInit(MemberInitExpression init)" />
+      <LineAnalysis line="428" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="429" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitMemberInit(init);" />
+      <LineAnalysis line="430" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="431" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Step 1: Get all values for the initialization" />
+      <LineAnalysis line="432" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object[] values = this.GetValuesFromStack(init.Bindings.Count);" />
+      <LineAnalysis line="433" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="434" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 2: Get target from stack" />
+      <LineAnalysis line="435" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object target = this.GetValueFromStack();" />
+      <LineAnalysis line="436" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="437" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 3: Initialize the properties." />
+      <LineAnalysis line="438" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;for (int index = 0; index &lt; init.Bindings.Count; index++)" />
+      <LineAnalysis line="439" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="440" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;MemberBinding binding = init.Bindings[index];" />
+      <LineAnalysis line="441" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;MemberInfo memberInfo = binding.Member;" />
+      <LineAnalysis line="442" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;if (memberInfo is PropertyInfo)" />
+      <LineAnalysis line="443" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="444" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;PropertyInfo propertyInfo = (PropertyInfo)memberInfo;" />
+      <LineAnalysis line="445" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;object value = values[index];" />
+      <LineAnalysis line="446" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;propertyInfo.SetValue(target, value, null);" />
+      <LineAnalysis line="447" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="448" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;else if (memberInfo is FieldInfo)" />
+      <LineAnalysis line="449" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="450" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;FieldInfo fieldInfo = (FieldInfo)memberInfo;" />
+      <LineAnalysis line="451" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;object value = values[index];" />
+      <LineAnalysis line="452" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;fieldInfo.SetValue(target, value);" />
+      <LineAnalysis line="453" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="454" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="455" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="456" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 4 : Put initialized instance back on the stack." />
+      <LineAnalysis line="457" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(target);" />
+      <LineAnalysis line="458" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="459" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="460" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="461" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="462" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;protected override Expression VisitListInit(ListInitExpression init)" />
+      <LineAnalysis line="463" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="464" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;Expression expression = base.VisitListInit(init);" />
+      <LineAnalysis line="465" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="466" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 1: Get all values for initialization" />
+      <LineAnalysis line="467" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;int initializerArgumentCount = init.Initializers.First().Arguments.Count;" />
+      <LineAnalysis line="468" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;int initializerCount = init.Initializers.Count;" />
+      <LineAnalysis line="469" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object[] values = this.GetValuesFromStack(initializerCount * initializerArgumentCount);" />
+      <LineAnalysis line="470" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="471" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 2: Get target from stack" />
+      <LineAnalysis line="472" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object target = this.GetValueFromStack();" />
+      <LineAnalysis line="473" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="474" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 3: Add the values" />
+      <LineAnalysis line="475" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;for (int i = 0; i &lt; initializerCount; i++)" />
+      <LineAnalysis line="476" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="477" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;ElementInit initializer = init.Initializers[i];" />
+      <LineAnalysis line="478" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="479" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object[] argumentValues = new object[initializerArgumentCount];" />
+      <LineAnalysis line="480" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;for (int j = 0; j &lt; initializerArgumentCount; j++)" />
+      <LineAnalysis line="481" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="482" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;int index = (i * initializerArgumentCount) + j;" />
+      <LineAnalysis line="483" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;object arg = values[index];" />
+      <LineAnalysis line="484" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;argumentValues[j] = arg;" />
+      <LineAnalysis line="485" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="486" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="487" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;MethodInfo methodInfo = initializer.AddMethod;" />
+      <LineAnalysis line="488" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;methodInfo.Invoke(target, argumentValues);" />
+      <LineAnalysis line="489" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="490" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="491" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;// Set 4: Put target back on the stack" />
+      <LineAnalysis line="492" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.data.Push(target);" />
+      <LineAnalysis line="493" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="494" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return expression;" />
+      <LineAnalysis line="495" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="496" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="497" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private object[] GetValuesFromStack(int count)" />
+      <LineAnalysis line="498" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="499" visits="36" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;IList&lt;object&gt; parameterValues = new List&lt;object&gt;();" />
+      <LineAnalysis line="500" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="501" visits="214" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;for (int i = 0; i &lt; count; i++)" />
+      <LineAnalysis line="502" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="503" visits="71" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;object parameterValue = this.GetValueFromStack();" />
+      <LineAnalysis line="504" visits="71" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;parameterValues.Add(parameterValue);" />
+      <LineAnalysis line="505" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="506" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="507" visits="36" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return parameterValues.Reverse().ToArray();" />
+      <LineAnalysis line="508" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="509" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="510" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;summary&gt;" />
+      <LineAnalysis line="511" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// Gets a single value from the stack." />
+      <LineAnalysis line="512" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;/summary&gt;" />
+      <LineAnalysis line="513" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;/// &lt;returns&gt;The element.&lt;/returns&gt;" />
+      <LineAnalysis line="514" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private object GetValueFromStack()" />
+      <LineAnalysis line="515" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="516" visits="285" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object parameterValue = this.data.Pop();" />
+      <LineAnalysis line="517" visits="285" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return parameterValue;" />
+      <LineAnalysis line="518" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="519" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="520" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Initialize()" />
+      <LineAnalysis line="521" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="522" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.args = InitializeArgs((LambdaExpression)this.targetExpression, this.passedArgumentValues);" />
+      <LineAnalysis line="523" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="524" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="525" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private static IDictionary&lt;string, object&gt; InitializeArgs(LambdaExpression lambdaExpression, object[] parameterValues)" />
+      <LineAnalysis line="526" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="527" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;IDictionary&lt;string, object&gt; arguments = new Dictionary&lt;string, object&gt;();" />
+      <LineAnalysis line="528" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="529" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;int index = 0;" />
+      <LineAnalysis line="530" visits="416" coverage="Covered" coveredbranches="2" totalbranches="2" content="&#x9;&#x9;&#x9;foreach (ParameterExpression parameter in lambdaExpression.Parameters)" />
+      <LineAnalysis line="531" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="532" visits="68" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;string name = parameter.Name;" />
+      <LineAnalysis line="533" visits="68" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;arguments[name] = parameterValues[index++];" />
+      <LineAnalysis line="534" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="535" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="536" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return arguments;" />
+      <LineAnalysis line="537" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="538" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="539" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private MethodInfo FindMethod(string name, Type[] genericArguments)" />
+      <LineAnalysis line="540" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="541" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;MethodInfo result = null;" />
+      <LineAnalysis line="542" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="543" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="            IEnumerable&lt;MethodInfo&gt; methods = this.GetType().GetTypeInfo().DeclaredMethods.Where(m =&gt; m.Name == name);" />
+      <LineAnalysis line="544" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="            foreach (MethodInfo method in methods)" />
+      <LineAnalysis line="545" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="546" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;// create the generic method" />
+      <LineAnalysis line="547" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;if (method.GetGenericArguments().Count() == genericArguments.Count())" />
+      <LineAnalysis line="548" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;{" />
+      <LineAnalysis line="549" visits="0" coverage="NotCovered" coveredbranches="0" totalbranches="2" content="&#x9;&#x9;&#x9;&#x9;&#x9;result = method.IsGenericMethod" />
+      <LineAnalysis line="550" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? method.MakeGenericMethod(genericArguments)" />
+      <LineAnalysis line="551" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;: method;" />
+      <LineAnalysis line="552" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;&#x9;break;" />
+      <LineAnalysis line="553" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="554" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;}" />
+      <LineAnalysis line="555" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="556" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return result;" />
+      <LineAnalysis line="557" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="558" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="559" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private TResult Func&lt;T, TResult&gt;(T arg)" />
+      <LineAnalysis line="560" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="561" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return (TResult)this.ExecuteReflector(arg);" />
+      <LineAnalysis line="562" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="563" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="564" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private TResult Func&lt;T1, T2, TResult&gt;(T1 arg1, T2 arg2)" />
+      <LineAnalysis line="565" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="566" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return (TResult)this.ExecuteReflector(arg1, arg2);" />
+      <LineAnalysis line="567" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="568" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="569" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private TResult Func&lt;T1, T2, T3, TResult&gt;(T1 arg1, T2 arg2, T3 arg3)" />
+      <LineAnalysis line="570" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="571" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return (TResult)this.ExecuteReflector(arg1, arg2, arg3);" />
+      <LineAnalysis line="572" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="573" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="574" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private TResult Func&lt;T1, T2, T3, T4, TResult&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4)" />
+      <LineAnalysis line="575" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="576" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return (TResult)this.ExecuteReflector(arg1, arg2, arg3, arg4);" />
+      <LineAnalysis line="577" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="578" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="579" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Action()" />
+      <LineAnalysis line="580" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="581" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.ExecuteReflector();" />
+      <LineAnalysis line="582" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="583" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="584" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Action&lt;T&gt;(T arg)" />
+      <LineAnalysis line="585" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="586" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.ExecuteReflector(arg);" />
+      <LineAnalysis line="587" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="588" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="589" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Action&lt;T1, T2&gt;(T1 arg1, T2 arg2)" />
+      <LineAnalysis line="590" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="591" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.ExecuteReflector(arg1, arg2);" />
+      <LineAnalysis line="592" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="593" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="594" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Action&lt;T1, T2, T3&gt;(T1 arg1, T2 arg2, T3 arg3)" />
+      <LineAnalysis line="595" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="596" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.ExecuteReflector(arg1, arg2, arg3);" />
+      <LineAnalysis line="597" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="598" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="599" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private void Action&lt;T1, T2, T3, T4&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4)" />
+      <LineAnalysis line="600" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="601" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;this.ExecuteReflector(arg1, arg2, arg3, arg4);" />
+      <LineAnalysis line="602" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="603" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="604" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private bool Predicate&lt;T&gt;(T arg)" />
+      <LineAnalysis line="605" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="606" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return (bool)this.ExecuteReflector(arg);" />
+      <LineAnalysis line="607" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="608" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="609" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;private object ExecuteReflector(params object[] arguments)" />
+      <LineAnalysis line="610" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="611" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object result = Execute(arguments);" />
+      <LineAnalysis line="612" visits="0" coverage="NotCovered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return result;" />
+      <LineAnalysis line="613" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="614" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;}" />
+      <LineAnalysis line="615" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="}" />
+    </File>
+  </Files>
+</CoverageReport>

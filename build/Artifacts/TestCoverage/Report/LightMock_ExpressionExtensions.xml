@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="ExpressionReflect.ExpressionExtensions">
+  <Summary>
+    <Class>ExpressionReflect.ExpressionExtensions</Class>
+    <Assembly>LightMock</Assembly>
+    <Files>
+      <File>/Users/bernhardrichter/GitHub/LightMock/src/LightMock/ExpressionReflect/ExpressionExtensions.cs</File>
+    </Files>
+    <Coveredlines>3</Coveredlines>
+    <Uncoveredlines>0</Uncoveredlines>
+    <Coverablelines>3</Coverablelines>
+    <Totallines>14</Totallines>
+    <Linecoverage>100</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+  </Summary>
+  <Metrics>
+    <Element name="Execute">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+  </Metrics>
+  <Files>
+    <File name="/Users/bernhardrichter/GitHub/LightMock/src/LightMock/ExpressionReflect/ExpressionExtensions.cs">
+      <LineAnalysis line="1" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="namespace ExpressionReflect" />
+      <LineAnalysis line="2" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="{" />
+      <LineAnalysis line="3" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;using System.Linq.Expressions;" />
+      <LineAnalysis line="4" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="5" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;public static class ExpressionExtensions" />
+      <LineAnalysis line="6" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;{" />
+      <LineAnalysis line="7" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;public static object Execute(this Expression expression, params object[] values)" />
+      <LineAnalysis line="8" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;{" />
+      <LineAnalysis line="9" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;ExpressionReflectionExecutor visitor = new ExpressionReflectionExecutor(expression);" />
+      <LineAnalysis line="10" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;object result = visitor.Execute(values);" />
+      <LineAnalysis line="11" visits="140" coverage="Covered" coveredbranches="" totalbranches="" content="&#x9;&#x9;&#x9;return result;" />
+      <LineAnalysis line="12" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;&#x9;}" />
+      <LineAnalysis line="13" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="&#x9;}" />
+      <LineAnalysis line="14" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="}" />
+    </File>
+  </Files>
+</CoverageReport>

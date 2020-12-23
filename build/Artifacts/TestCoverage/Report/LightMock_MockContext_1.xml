@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="LightMock.MockContext`1">
+  <Summary>
+    <Class>LightMock.MockContext`1</Class>
+    <Assembly>LightMock</Assembly>
+    <Files>
+      <File>/Users/bernhardrichter/GitHub/LightMock/src/LightMock/MockContext.cs</File>
+    </Files>
+    <Coveredlines>36</Coveredlines>
+    <Uncoveredlines>0</Uncoveredlines>
+    <Coverablelines>36</Coverablelines>
+    <Totallines>174</Totallines>
+    <Linecoverage>100</Linecoverage>
+    <Coveredbranches>8</Coveredbranches>
+    <Totalbranches>8</Totalbranches>
+    <Branchcoverage>100</Branchcoverage>
+  </Summary>
+  <Metrics>
+    <Element name="ctor">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Arrange">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Arrange">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="ArrangeProperty">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Assert">
+      <Cyclomaticcomplexity>1</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="Assert">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="LightMockIInvocationContextTMockInvoke">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="LightMockIInvocationContextTMockInvoke">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+    <Element name="LightMockIInvocationContextTMockInvokeSetter">
+      <Cyclomaticcomplexity>2</Cyclomaticcomplexity>
+      <Linecoverage>100</Linecoverage>
+      <Branchcoverage>100</Branchcoverage>
+    </Element>
+  </Metrics>
+  <Files>
+    <File name="/Users/bernhardrichter/GitHub/LightMock/src/LightMock/MockContext.cs">
+      <LineAnalysis line="1" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="/*****************************************************************************" />
+      <LineAnalysis line="2" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    The MIT License (MIT)" />
+      <LineAnalysis line="3" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="4" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    Copyright (c) 2014 bernhard.richter@gmail.com" />
+      <LineAnalysis line="5" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="6" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    Permission is hereby granted, free of charge, to any person obtaining a copy" />
+      <LineAnalysis line="7" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    of this software and associated documentation files (the &quot;Software&quot;), to deal" />
+      <LineAnalysis line="8" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    in the Software without restriction, including without limitation the rights" />
+      <LineAnalysis line="9" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell" />
+      <LineAnalysis line="10" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    copies of the Software, and to permit persons to whom the Software is" />
+      <LineAnalysis line="11" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    furnished to do so, subject to the following conditions:" />
+      <LineAnalysis line="12" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="13" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    The above copyright notice and this permission notice shall be included in all" />
+      <LineAnalysis line="14" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    copies or substantial portions of the Software." />
+      <LineAnalysis line="15" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="16" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR" />
+      <LineAnalysis line="17" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY," />
+      <LineAnalysis line="18" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE" />
+      <LineAnalysis line="19" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER" />
+      <LineAnalysis line="20" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM," />
+      <LineAnalysis line="21" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE" />
+      <LineAnalysis line="22" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    SOFTWARE." />
+      <LineAnalysis line="23" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="******************************************************************************" />
+      <LineAnalysis line="24" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    https://github.com/seesharper/LightMock" />
+      <LineAnalysis line="25" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    http://twitter.com/bernhardrichter" />
+      <LineAnalysis line="26" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="******************************************************************************/" />
+      <LineAnalysis line="27" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="namespace LightMock" />
+      <LineAnalysis line="28" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="{" />
+      <LineAnalysis line="29" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    using System;" />
+      <LineAnalysis line="30" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    using System.Collections.Generic;" />
+      <LineAnalysis line="31" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    using System.Linq;" />
+      <LineAnalysis line="32" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    using System.Linq.Expressions;" />
+      <LineAnalysis line="33" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="34" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    /// &lt;summary&gt;" />
+      <LineAnalysis line="35" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    /// A class that represents the mock context for a given &lt;typeparamref name=&quot;TMock&quot;/&gt; type." />
+      <LineAnalysis line="36" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    /// &lt;/summary&gt;" />
+      <LineAnalysis line="37" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    /// &lt;typeparam name=&quot;TMock&quot;&gt;The target mock type.&lt;/typeparam&gt;" />
+      <LineAnalysis line="38" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    public class MockContext&lt;TMock&gt; : IMockContext&lt;TMock&gt;, IInvocationContext&lt;TMock&gt;" />
+      <LineAnalysis line="39" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    {" />
+      <LineAnalysis line="40" visits="41" coverage="Covered" coveredbranches="" totalbranches="" content="        private readonly List&lt;InvocationInfo&gt; invocations = new List&lt;InvocationInfo&gt;();" />
+      <LineAnalysis line="41" visits="41" coverage="Covered" coveredbranches="" totalbranches="" content="        private readonly List&lt;Arrangement&gt; arrangements = new List&lt;Arrangement&gt;();" />
+      <LineAnalysis line="42" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="43" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="44" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Arranges a mocked method." />
+      <LineAnalysis line="45" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="46" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;matchExpression&quot;&gt;The match expression that describes where" />
+      <LineAnalysis line="47" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// this &lt;see cref=&quot;Arrangement&quot;/&gt; will be applied.&lt;/param&gt;" />
+      <LineAnalysis line="48" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;returns&gt;A new &lt;see cref=&quot;Arrangement&quot;/&gt; used to apply method behavior.&lt;/returns&gt;" />
+      <LineAnalysis line="49" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        public Arrangement Arrange(Expression&lt;Action&lt;TMock&gt;&gt; matchExpression)" />
+      <LineAnalysis line="50" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="51" visits="6" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = new Arrangement(matchExpression);" />
+      <LineAnalysis line="52" visits="6" coverage="Covered" coveredbranches="" totalbranches="" content="            arrangements.Add(arrangement);" />
+      <LineAnalysis line="53" visits="6" coverage="Covered" coveredbranches="" totalbranches="" content="            return arrangement;" />
+      <LineAnalysis line="54" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="55" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="56" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="57" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Arranges a mocked method." />
+      <LineAnalysis line="58" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="59" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;typeparam name=&quot;TResult&quot;&gt;The type of value returned from the mocked method.&lt;/typeparam&gt;" />
+      <LineAnalysis line="60" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;matchExpression&quot;&gt;The match expression that describes where" />
+      <LineAnalysis line="61" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// this &lt;see cref=&quot;Arrangement{TResult}&quot;/&gt; will be applied.&lt;/param&gt;" />
+      <LineAnalysis line="62" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;returns&gt;A new &lt;see cref=&quot;Arrangement{TResult}&quot;/&gt; used to apply method behavior.&lt;/returns&gt;" />
+      <LineAnalysis line="63" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        public Arrangement&lt;TResult&gt; Arrange&lt;TResult&gt;(Expression&lt;Func&lt;TMock, TResult&gt;&gt; matchExpression)" />
+      <LineAnalysis line="64" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="65" visits="13" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = new Arrangement&lt;TResult&gt;(matchExpression);" />
+      <LineAnalysis line="66" visits="13" coverage="Covered" coveredbranches="" totalbranches="" content="            arrangements.Add(arrangement);" />
+      <LineAnalysis line="67" visits="13" coverage="Covered" coveredbranches="" totalbranches="" content="            return arrangement;" />
+      <LineAnalysis line="68" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="69" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="70" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="71" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Arranges a mocked property." />
+      <LineAnalysis line="72" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="73" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;typeparam name=&quot;TResult&quot;&gt;The type of value returned from the mocked property.&lt;/typeparam&gt;" />
+      <LineAnalysis line="74" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;matchExpression&quot;&gt;The match expression that describes where" />
+      <LineAnalysis line="75" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// this &lt;see cref=&quot;PropertyArrangement{TResult}&quot;/&gt; will be applied.&lt;/param&gt;" />
+      <LineAnalysis line="76" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;returns&gt;A new &lt;see cref=&quot;PropertyArrangement{TResult}&quot;/&gt; used to apply property behavior.&lt;/returns&gt;" />
+      <LineAnalysis line="77" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        public PropertyArrangement&lt;TResult&gt; ArrangeProperty&lt;TResult&gt;(Expression&lt;Func&lt;TMock, TResult&gt;&gt; matchExpression)" />
+      <LineAnalysis line="78" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="79" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = new PropertyArrangement&lt;TResult&gt;(matchExpression);" />
+      <LineAnalysis line="80" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="            arrangements.Add(arrangement);" />
+      <LineAnalysis line="81" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="            return arrangement;" />
+      <LineAnalysis line="82" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="83" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="84" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="85" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Verifies that the method represented by the &lt;paramref name=&quot;matchExpression&quot;/&gt; has" />
+      <LineAnalysis line="86" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// been invoked." />
+      <LineAnalysis line="87" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="88" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;matchExpression&quot;&gt;The &lt;see cref=&quot;Expression{TDelegate}&quot;/&gt; that represents" />
+      <LineAnalysis line="89" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// the method invocation to be verified.&lt;/param&gt;" />
+      <LineAnalysis line="90" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        public void Assert(Expression&lt;Action&lt;TMock&gt;&gt; matchExpression)" />
+      <LineAnalysis line="91" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="92" visits="5" coverage="Covered" coveredbranches="" totalbranches="" content="            Assert(matchExpression, Invoked.AtLeast(1));" />
+      <LineAnalysis line="93" visits="4" coverage="Covered" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="94" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="95" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="96" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Verifies that the method represented by the &lt;paramref name=&quot;matchExpression&quot;/&gt; has" />
+      <LineAnalysis line="97" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// been invoked the specified number of &lt;paramref name=&quot;invoked&quot;/&gt;." />
+      <LineAnalysis line="98" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="99" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;matchExpression&quot;&gt;The &lt;see cref=&quot;Expression{TDelegate}&quot;/&gt; that represents" />
+      <LineAnalysis line="100" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// the method invocation to be verified.&lt;/param&gt;" />
+      <LineAnalysis line="101" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;invoked&quot;&gt;Specifies the number of times we expect the mocked method to be invoked.&lt;/param&gt;" />
+      <LineAnalysis line="102" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        public void Assert(Expression&lt;Action&lt;TMock&gt;&gt; matchExpression, Invoked invoked)" />
+      <LineAnalysis line="103" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="104" visits="19" coverage="Covered" coveredbranches="" totalbranches="" content="            var matchInfo = matchExpression.ToMatchInfo();" />
+      <LineAnalysis line="105" visits="19" coverage="Covered" coveredbranches="" totalbranches="" content="            var callCount = invocations.Count(matchInfo.Matches);" />
+      <LineAnalysis line="106" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="107" visits="19" coverage="Covered" coveredbranches="2" totalbranches="2" content="            if (!invoked.Verify(callCount))" />
+      <LineAnalysis line="108" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            {" />
+      <LineAnalysis line="109" visits="8" coverage="Covered" coveredbranches="" totalbranches="" content="                throw new InvalidOperationException(string.Format(&quot;The method {0} was called {1} times&quot;, matchExpression.Simplify(), callCount));" />
+      <LineAnalysis line="110" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            }" />
+      <LineAnalysis line="111" visits="11" coverage="Covered" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="112" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="113" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="114" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Tracks that the method represented by the &lt;paramref name=&quot;expression&quot;/&gt;" />
+      <LineAnalysis line="115" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// has been invoked." />
+      <LineAnalysis line="116" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="117" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;expression&quot;&gt;The &lt;see cref=&quot;Expression{TDelegate}&quot;/&gt; that" />
+      <LineAnalysis line="118" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// represents the method that has been invoked.&lt;/param&gt;" />
+      <LineAnalysis line="119" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        void IInvocationContext&lt;TMock&gt;.Invoke(Expression&lt;Action&lt;TMock&gt;&gt; expression)" />
+      <LineAnalysis line="120" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="121" visits="7" coverage="Covered" coveredbranches="" totalbranches="" content="            var invocationInfo = expression.ToInvocationInfo();" />
+      <LineAnalysis line="122" visits="7" coverage="Covered" coveredbranches="" totalbranches="" content="            invocations.Add(invocationInfo);" />
+      <LineAnalysis line="123" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="124" visits="14" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = arrangements.FirstOrDefault(a =&gt; a.Matches(invocationInfo));" />
+      <LineAnalysis line="125" visits="7" coverage="Covered" coveredbranches="2" totalbranches="2" content="            if (arrangement != null)" />
+      <LineAnalysis line="126" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            {" />
+      <LineAnalysis line="127" visits="6" coverage="Covered" coveredbranches="" totalbranches="" content="                arrangement.Execute(invocationInfo.Arguments);" />
+      <LineAnalysis line="128" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            }" />
+      <LineAnalysis line="129" visits="7" coverage="Covered" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="130" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="131" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="132" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Tracks that the method represented by the &lt;paramref name=&quot;expression&quot;/&gt;" />
+      <LineAnalysis line="133" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// has been invoked." />
+      <LineAnalysis line="134" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="135" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;typeparam name=&quot;TResult&quot;&gt;The return type of the method that has been invoked.&lt;/typeparam&gt;" />
+      <LineAnalysis line="136" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;expression&quot;&gt;The &lt;see cref=&quot;Expression{TDelegate}&quot;/&gt; that" />
+      <LineAnalysis line="137" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// represents the method that has been invoked.&lt;/param&gt;" />
+      <LineAnalysis line="138" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;returns&gt;An instance of &lt;typeparamref name=&quot;TResult&quot;/&gt; or possibly null" />
+      <LineAnalysis line="139" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// if &lt;typeparamref name=&quot;TResult&quot;/&gt; a reference type.&lt;/returns&gt;" />
+      <LineAnalysis line="140" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        TResult IInvocationContext&lt;TMock&gt;.Invoke&lt;TResult&gt;(Expression&lt;Func&lt;TMock, TResult&gt;&gt; expression)" />
+      <LineAnalysis line="141" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="142" visits="47" coverage="Covered" coveredbranches="" totalbranches="" content="            var invocationInfo = expression.ToInvocationInfo();" />
+      <LineAnalysis line="143" visits="47" coverage="Covered" coveredbranches="" totalbranches="" content="            invocations.Add(invocationInfo);" />
+      <LineAnalysis line="144" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="145" visits="62" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = arrangements.FirstOrDefault(a =&gt; a.Matches(invocationInfo));" />
+      <LineAnalysis line="146" visits="47" coverage="Covered" coveredbranches="2" totalbranches="2" content="            if (arrangement != null)" />
+      <LineAnalysis line="147" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            {" />
+      <LineAnalysis line="148" visits="15" coverage="Covered" coveredbranches="" totalbranches="" content="                return (TResult)arrangement.Execute(invocationInfo.Arguments);" />
+      <LineAnalysis line="149" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            }" />
+      <LineAnalysis line="150" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="151" visits="32" coverage="Covered" coveredbranches="" totalbranches="" content="            return default(TResult);" />
+      <LineAnalysis line="152" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="153" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="154" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;summary&gt;" />
+      <LineAnalysis line="155" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// Tracks that the setter represented by the &lt;paramref name=&quot;expression&quot;/&gt;" />
+      <LineAnalysis line="156" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// has been invoked." />
+      <LineAnalysis line="157" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;/summary&gt;" />
+      <LineAnalysis line="158" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;expression&quot;&gt;The &lt;see cref=&quot;Expression{TDelegate}&quot;/&gt; that" />
+      <LineAnalysis line="159" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// represents the setter that has been invoked.&lt;/param&gt;" />
+      <LineAnalysis line="160" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        /// &lt;param name=&quot;value&quot;&gt;The value&lt;/param&gt;" />
+      <LineAnalysis line="161" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        void IInvocationContext&lt;TMock&gt;.InvokeSetter&lt;TResult&gt;(Expression&lt;Func&lt;TMock, TResult&gt;&gt; expression, object value)" />
+      <LineAnalysis line="162" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="        {" />
+      <LineAnalysis line="163" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="            var invocationInfo = expression.ToInvocationInfo();" />
+      <LineAnalysis line="164" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="            invocations.Add(invocationInfo);" />
+      <LineAnalysis line="165" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="166" visits="2" coverage="Covered" coveredbranches="" totalbranches="" content="            var arrangement = arrangements.FirstOrDefault(a =&gt; a.Matches(invocationInfo));" />
+      <LineAnalysis line="167" visits="1" coverage="Covered" coveredbranches="2" totalbranches="2" content="            if (arrangement != null)" />
+      <LineAnalysis line="168" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            {" />
+      <LineAnalysis line="169" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="                arrangement.Execute(new[] { value });" />
+      <LineAnalysis line="170" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="            }" />
+      <LineAnalysis line="171" visits="1" coverage="Covered" coveredbranches="" totalbranches="" content="        }" />
+      <LineAnalysis line="172" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="" />
+      <LineAnalysis line="173" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="    }" />
+      <LineAnalysis line="174" visits="-1" coverage="NotCoverable" coveredbranches="" totalbranches="" content="}" />
+    </File>
+  </Files>
+</CoverageReport>

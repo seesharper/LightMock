@@ -1,0 +1,119 @@
+{
+  "Query Handler": {
+    "prefix": "qh",
+    "body": [
+      "using System.Data;",
+      "using System.Threading;",
+      "using System.Threading.Tasks;",
+      "using HeatKeeper.Server.CQRS;",
+      "using HeatKeeper.Server.Database;",
+      "using DbReader;",
+      "using System.Linq;",
+      "",
+      "namespace ${TM_DIRECTORY/(.*src.)|(src.*)|([\\/])/${2}${3:+.}/g}",
+      "{",
+      "    public class ${TM_FILENAME/(.*)\\..+$/$1/} : IQueryHandler<${TM_FILENAME/(.*)\\Handler..+$/$1/},${TM_FILENAME/(.*)\\Handler..+$/$1Result/}>",
+      "    {",
+      "        private readonly IDbConnection dbConnection;",
+      "        private readonly ISqlProvider sqlProvider;",
+      "",
+      "        public ${TM_FILENAME/(.*)\\..+$/$1/}(IDbConnection dbConnection, ISqlProvider sqlProvider)",
+      "        {",
+      "            this.dbConnection = dbConnection;",
+      "            this.sqlProvider = sqlProvider;",
+      "        }",
+      "",
+      "        public async Task<${TM_FILENAME/(.*)\\Handler..+$/$1Result/}> HandleAsync(${TM_FILENAME/(.*)\\Handler..+$/$1/} query, CancellationToken cancellationToken = default(CancellationToken))",
+      "        {",
+      "            return null;",
+      "        }",
+      "    }",
+      "    public class ${TM_FILENAME/(.*)\\Handler..+$/$1/} : IQuery<${TM_FILENAME/(.*)\\Handler..+$/$1Result/}>",
+      "    {",
+      "    }",
+      "",
+      "    public class ${TM_FILENAME/(.*)\\Handler..+$/$1Result/}",
+      "    {",
+      "    }",
+      "",
+      "",
+      "}"
+    ],
+    "description": "Query Handler"
+  },
+  "Command Handler": {
+    "prefix": "ch",
+    "body": [
+      "using DbReader;",
+      "using CQRS.Command.Abstractions;",
+      "using HeatKeeper.Server.Database;",
+      "using System.Data;",
+      "using System.Data.Common;",
+      "using System.Threading;",
+      "using System.Threading.Tasks;",
+      "",
+      "namespace ${TM_DIRECTORY/(.*src.)|(src.*)|([\\/])/${2}${3:+.}/g}",
+      "{",
+      "    public class ${TM_FILENAME/(.*)\\..+$/$1/} : ICommandHandler<${TM_FILENAME/(.*)\\Handler..+$/$1/}>",
+      "    {",
+      "        private readonly IDbConnection dbConnection;",
+      "        private readonly ISqlProvider sqlProvider;",
+      "",
+      "        public ${TM_FILENAME/(.*)\\..+$/$1/}(IDbConnection dbConnection, ISqlProvider sqlProvider)",
+      "        {",
+      "            this.dbConnection = dbConnection;",
+      "            this.sqlProvider = sqlProvider;",
+      "        }",
+      "",
+      "        public async Task HandleAsync(${TM_FILENAME/(.*)\\Handler..+$/$1/} command, CancellationToken cancellationToken = default(CancellationToken))",
+      "        {            ",
+      "        }",
+      "    }",
+      "",
+      "    public class ${TM_FILENAME/(.*)\\Handler..+$/$1/}",
+      "    {        ",
+      "    }",
+      "}"
+    ],
+    "description": "Command Handler"
+  },
+  "public class": {
+    "prefix": "pc",
+    "body": [
+      "namespace ${TM_DIRECTORY/(.*src.)|(src.*)|([\\/])/${2}${3:+.}/g}",
+      "{",
+      "    public class ${TM_FILENAME/(.*)\\..+$/$1/}",
+      "    {        ",
+      "    }",
+      "}"
+    ],
+    "description": "public class"
+  },
+  "public interface": {
+    "prefix": "pi",
+    "body": [
+      "namespace ${TM_DIRECTORY/(.*src.)|(src.*)|([\\/])/${2}${3:+.}/g}",
+      "{",
+      "    public interface ${TM_FILENAME/(.*)\\..+$/$1/}",
+      "    {        ",
+      "    }",
+      "}"
+    ],
+    "description": "public interface"
+  },
+  "public async method": {
+    "prefix": "pas",
+    "body": ["public async Task ${1:Method}()", "{", "}"],
+    "description": "public async method"
+  },
+  "test method": {
+    "prefix": "tm",
+    "body": ["[Fact]", "public async Task ${1:Method}()", "{", "}"],
+    "description": "test method"
+  },
+  "public method": {
+    "prefix": "pm",
+    "body": ["public void ${1:Method}()", "{", "}"],
+    "description": "public void method"
+  }
+}

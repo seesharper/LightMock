@@ -1,35 +1,29 @@
-﻿namespace LightMock.Tests
+﻿using System;
+using System.Linq.Expressions;
+using System.Reflection;
+using Xunit;
+
+namespace LightMock.Tests
 {
-    using System;
-    using System.Linq.Expressions;
-
-   
-
-    using LightMock;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System.Reflection;
-
-    [TestClass]
     public class MatchInfoTests
     {
-        [TestMethod]
+        [Fact]
         public void Matches_SameValue_ReturnsTrue()
         {
             var predicateBuilder = new MatchInfoBuilder();
             Expression<Action<IFoo>> expression = (f) => f.Execute("SomeValue");
-            
-            var matchInfo = predicateBuilder.Build(expression);            
 
-            
+            var matchInfo = predicateBuilder.Build(expression);
+
+
             var invocationInfo = new InvocationInfo(
                 typeof(IFoo).GetMethod("Execute", new Type[] { typeof(string) }),
-                new[] { "SomeValue" });            
+                new[] { "SomeValue" });
 
-            Assert.IsTrue(matchInfo.Matches(invocationInfo));
+            Assert.True(matchInfo.Matches(invocationInfo));
         }
 
-        [TestMethod]
+        [Fact]
         public void Matches_DifferentValue_ReturnsFalse()
         {
             var predicateBuilder = new MatchInfoBuilder();
@@ -41,10 +35,10 @@
                 typeof(IFoo).GetMethod("Execute", new Type[] { typeof(string) }),
                 new[] { "AnotherValue" });
 
-            Assert.IsFalse(matchInfo.Matches(invocationInfo));
+            Assert.False(matchInfo.Matches(invocationInfo));
         }
 
-        [TestMethod]
+        [Fact]
         public void Matches_SameValueDifferentMethod_ReturnsFalse()
         {
             var predicateBuilder = new MatchInfoBuilder();
@@ -56,10 +50,10 @@
                 typeof(IBar).GetMethod("Execute", new Type[] { typeof(string) }),
                 new[] { "SomeValue" });
 
-            Assert.IsFalse(matchInfo.Matches(invocationInfo));
+            Assert.False(matchInfo.Matches(invocationInfo));
         }
 
-        [TestMethod]
+        [Fact]
         public void Matches_ArgumentCountMismatch_ReturnsFalse()
         {
             var predicateBuilder = new MatchInfoBuilder();
@@ -71,7 +65,7 @@
                 typeof(IFoo).GetMethod("Execute", new Type[] { typeof(string) }),
                 new[] { "SomeValue", "AnotherValue" });
 
-            Assert.IsFalse(matchInfo.Matches(invocationInfo));
+            Assert.False(matchInfo.Matches(invocationInfo));
         }
     }
 }
