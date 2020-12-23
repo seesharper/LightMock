@@ -6,7 +6,7 @@
     <Description>LightMock is a simple mocking library that can be used on platforms that does not allow dynamic code generation.</Description>
     <Version>2.0.0</Version>
     <Copyright>Bernhard Richter</Copyright>
-    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>http://www.lightinject.net/#lightmock</PackageProjectUrl>
     <PackageTags>Mocking Mock Xamarin iOS Android NetCore</PackageTags>
     <RepositoryType>git</RepositoryType>
