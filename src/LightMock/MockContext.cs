@@ -48,8 +48,13 @@ namespace LightMock
         /// <returns>A new <see cref="Arrangement"/> used to apply method behavior.</returns>
         public Arrangement Arrange(Expression<Action<TMock>> matchExpression)
         {
-            var arrangement = new Arrangement(matchExpression);
-            arrangements.Add(arrangement);
+            var matchInfo = matchExpression.ToMatchInfo();
+            var arrangement = arrangements.FirstOrDefault(a => a.Matches(matchInfo));
+            if (arrangement == null)
+            {
+                arrangement = new Arrangement(matchExpression);
+                arrangements.Add(arrangement);
+            }
             return arrangement;
         }
 
@@ -62,8 +67,16 @@ namespace LightMock
         /// <returns>A new <see cref="Arrangement{TResult}"/> used to apply method behavior.</returns>
         public Arrangement<TResult> Arrange<TResult>(Expression<Func<TMock, TResult>> matchExpression)
         {
-            var arrangement = new Arrangement<TResult>(matchExpression);
-            arrangements.Add(arrangement);
+            var matchInfo = matchExpression.ToMatchInfo();
+            var arrangement = (from i in arrangements
+                               let a = i as Arrangement<TResult>
+                               where a != null && a.Matches(matchInfo)
+                               select a).FirstOrDefault();
+            if (arrangement == null)
+            {
+                arrangement = new Arrangement<TResult>(matchExpression);
+                arrangements.Add(arrangement);
+            }
             return arrangement;
         }
 
@@ -76,8 +89,16 @@ namespace LightMock
         /// <returns>A new <see cref="PropertyArrangement{TResult}"/> used to apply property behavior.</returns>
         public PropertyArrangement<TResult> ArrangeProperty<TResult>(Expression<Func<TMock, TResult>> matchExpression)
         {
-            var arrangement = new PropertyArrangement<TResult>(matchExpression);
-            arrangements.Add(arrangement);
+            var matchInfo = matchExpression.ToMatchInfo();
+            var arrangement = (from i in arrangements
+                               let a = i as PropertyArrangement<TResult>
+                               where a != null && a.Matches(matchInfo)
+                               select a).FirstOrDefault();
+            if (arrangement == null)
+            {
+                arrangement = new PropertyArrangement<TResult>(matchExpression);
+                arrangements.Add(arrangement);
+            }
             return arrangement;
         }
 

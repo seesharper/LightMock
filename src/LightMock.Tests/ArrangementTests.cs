@@ -223,5 +223,64 @@ namespace LightMock.Tests
             var result = fooMock.Execute(" is", " really", " cool", "!");
             Assert.Equal("This is really cool!", result);
         }
+
+        [Fact]
+        public void Arrange_ChangeReturnValue()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            mockContext.Arrange(f => f.Execute()).Returns("1");
+            Assert.Equal("1", fooMock.Execute());
+
+            mockContext.Arrange(f => f.Execute()).Returns("2");
+            Assert.Equal("2", fooMock.Execute());
+        }
+
+        [Fact]
+        public void Arrange_ChangeCallback()
+        {
+            int firstResult = 0;
+            int secondResult = 0;
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            mockContext.Arrange(f => f.Execute(The<int>.IsAnyValue)).Callback<int>(i => firstResult = i);
+            fooMock.Execute(1);
+            mockContext.Arrange(f => f.Execute(The<int>.IsAnyValue)).Callback<int>(i => secondResult = i);
+            fooMock.Execute(2);
+
+            Assert.Equal(1, firstResult);
+            Assert.Equal(2, secondResult);
+        }
+
+        [Fact]
+        public void Arrange_ChangeException()
+        {
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            mockContext.Arrange(f => f.Execute(The<int>.IsAnyValue)).Throws<System.ArgumentNullException>();
+            Assert.Throws<System.ArgumentNullException>(() => fooMock.Execute(1));
+
+            mockContext.Arrange(f => f.Execute(The<int>.IsAnyValue)).Throws<System.ArgumentOutOfRangeException>();
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => fooMock.Execute(1));
+        }
+
+        [Fact]
+        public void Arrange_SimulatousReturnAndCallback()
+        {
+            string firstResult = "";
+            var mockContext = new MockContext<IFoo>();
+            var fooMock = new FooMock(mockContext);
+
+            mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Returns("hi");
+            mockContext.Arrange(f => f.Execute(The<string>.IsAnyValue)).Callback<string>(i => firstResult = i);
+
+            var result = fooMock.Execute("hello");
+
+            Assert.Equal("hi", result);
+            Assert.Equal("hello", firstResult);
+        }
     }
 }

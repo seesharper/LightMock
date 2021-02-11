@@ -36,7 +36,8 @@ namespace LightMock
     public class Arrangement
     {
         private readonly LambdaExpression expression;                
-        private readonly List<Action<object[]>> actions = new List<Action<object[]>>();
+        private Action throwAction;
+        private Action<object[]> callback;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Arrangement"/> class.
@@ -46,6 +47,8 @@ namespace LightMock
         public Arrangement(LambdaExpression expression)
         {
             this.expression = expression;
+            throwAction = () => { };
+            callback = (args) => { };
         }
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace LightMock
         /// <typeparam name="TException">The type of <see cref="Exception"/> to be thrown.</typeparam>
         public void Throws<TException>() where TException : Exception, new()
         {
-            actions.Add(args => { throw new TException(); });
+            throwAction = () => { throw new TException(); };
         }
 
         /// <summary>
@@ -64,7 +67,7 @@ namespace LightMock
         /// <param name="factory">A factory delegate used to create the <typeparamref name="TException"/> instance.</param>
         public void Throws<TException>(Func<TException> factory) where TException : Exception
         {
-            actions.Add(args => { throw factory(); });
+            throwAction = () => { throw factory(); };
         }
 
         /// <summary>
@@ -73,7 +76,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action"/> to be called when the mocked method is invoked.</param>
         public void Callback(Action callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -83,7 +86,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action{T}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T>(Action<T> callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -94,7 +97,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action{T1,T2}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T1, T2>(Action<T1, T2> callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -105,8 +108,8 @@ namespace LightMock
         /// <typeparam name="T3">The type of the third parameter.</typeparam>
         /// <param name="callBack">The <see cref="Action{T1,T2}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T1, T2, T3>(Action<T1, T2, T3> callBack)
-        {            
-            actions.Add(args => callBack.DynamicInvoke(args));
+        {
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -119,7 +122,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action{T1,T2}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T1, T2, T3, T4>(Action<T1, T2, T3, T4> callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -133,7 +136,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action{T1,T2}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T1, T2, T3, T4, T5>(Action<T1, T2, T3, T4, T5> callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -148,7 +151,7 @@ namespace LightMock
         /// <param name="callBack">The <see cref="Action{T1,T2}"/> to be called when the mocked method is invoked.</param>
         public void Callback<T1, T2, T3, T4, T5, T6>(Action<T1, T2, T3, T4, T5, T6> callBack)
         {
-            actions.Add(args => callBack.DynamicInvoke(args));
+            callback = args => callBack.DynamicInvoke(args);
         }
 
         /// <summary>
@@ -162,16 +165,24 @@ namespace LightMock
         }
 
         /// <summary>
+        /// Determines if the <paramref name="matchInfo"/> matches this <see cref="Arrangement"/>.
+        /// </summary>
+        /// <param name="matchInfo">The <see cref="MatchInfo"/> that represents the method invocation.</param>
+        /// <returns><b>True</b> if the <paramref name="matchInfo"/> matches this <see cref="Arrangement"/>, otherwise, <b>False</b>.</returns>
+        internal bool Matches(MatchInfo matchInfo)
+        {
+            return expression.ToMatchInfo().Equals(matchInfo);
+        }
+
+        /// <summary>
         /// Executes the arrangement.
         /// </summary>
         /// <param name="arguments">The arguments used to invoke the mocked method.</param>
         /// <returns>The registered return value, if any, otherwise, the default value.</returns>
         internal virtual object Execute(object[] arguments)
         {
-            foreach (var action in actions)
-            {
-                action(arguments);
-            }
+            callback(arguments);
+            throwAction();
 
             return null;
         }
