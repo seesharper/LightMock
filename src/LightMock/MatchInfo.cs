@@ -26,6 +26,8 @@
 ******************************************************************************/
 namespace LightMock
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Linq.Expressions;
     using System.Reflection;
@@ -34,7 +36,7 @@ namespace LightMock
     /// <summary>
     /// A class that is used to match a method invocation.
     /// </summary>
-    internal class MatchInfo
+    internal class MatchInfo : IEquatable<MatchInfo>
     {
         private readonly MemberInfo member;
 
@@ -86,6 +88,32 @@ namespace LightMock
             }
 
             return !matchExpressions.Where((t, i) => !(bool)t.Execute(invocationInfo.Arguments[i])).Any();
+        }
+
+        public bool Equals(MatchInfo other)
+        {
+            return other != null
+                && ExpressionType == other.ExpressionType
+                && member == other.member
+                && Equals(matchExpressions, other.matchExpressions);
+        }
+
+        /// <summary>
+        /// Determines whether the specified collections are equal.
+        /// </summary>
+        /// <param name="x">The first collection of lambda expressions to compare.</param>
+        /// <param name="y">The second collection of lambda expressions to compare.</param>
+        /// <returns>true if the specified collections are equal; otherwise, false.</returns>
+        static bool Equals(IReadOnlyCollection<LambdaExpression> x, IReadOnlyCollection<LambdaExpression> y)
+        {
+            if (x == null && y == null)
+                return true;
+            if (x != null && y != null)
+            {
+                return x.Count == y.Count
+                    && Enumerable.SequenceEqual(x, y, LambdaComparer.Instance);
+            }
+            return false;
         }
 
         /// <summary>
